@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   keywords: 'Full Stack Developer, React, Laravel, PHP, Next.js, Web Development, Baguio',
   authors: [{ name: 'Alpha Kyla Bangachon' }],
   creator: 'Alpha Kyla Bangachon',
+  metadataBase: new URL('https://kylabear.github.io'),
   openGraph: {
     title: 'Alpha Kyla Bangachon - Full Stack Developer',
     description: 'Full Stack Developer specializing in React, Laravel, PHP, and modern web technologies.',
