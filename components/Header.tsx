@@ -50,8 +50,20 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg md:text-xl">K</span>
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg overflow-hidden">
+              <img
+                src="/images/Profile.png"
+                alt="Kyla"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="w-full h-full flex items-center justify-center text-white font-bold text-lg md:text-xl hidden">
+                K
+              </div>
             </div>
             <span className="text-xl md:text-2xl font-bold gradient-text">Kyla</span>
           </motion.div>

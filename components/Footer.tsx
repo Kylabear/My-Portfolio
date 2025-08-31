@@ -140,36 +140,22 @@ const Footer = () => {
           {/* Divider */}
           <div className="border-t border-white/10 mb-8"></div>
 
-          {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center md:text-left"
-            >
-              <p className="text-gray-400 text-sm">
-                © {new Date().getFullYear()} Alpha Kyla Bangachon. All rights reserved.
-              </p>
-            </motion.div>
+                     {/* Bottom Section */}
+           <div className="flex flex-col justify-center items-center space-y-4">
+             {/* Copyright */}
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.6, delay: 0.6 }}
+               viewport={{ once: true }}
+               className="text-center"
+             >
+               <p className="text-gray-400 text-sm">
+                 © {new Date().getFullYear()} Alpha Kyla Bangachon. All rights reserved.
+               </p>
+             </motion.div>
 
-            {/* Made with Love */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-2 text-gray-400 text-sm"
-            >
-              <span>Made with</span>
-              <FaHeart className="w-4 h-4 text-red-500 animate-pulse" />
-              <span>using</span>
-              <span className="text-blue-400 font-semibold">Next.js</span>
-              <span>&</span>
-              <span className="text-cyan-400 font-semibold">Tailwind CSS</span>
-            </motion.div>
+            
           </div>
         </div>
       </div>
