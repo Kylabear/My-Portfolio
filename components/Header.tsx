@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,6 +31,8 @@ const Header = () => {
     { icon: FaGithub, href: 'https://github.com/Kylabear', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/kylabangachon-292953256/', label: 'LinkedIn' },
     { icon: FaEnvelope, href: 'mailto:alphabangachon@gmail.com', label: 'Email' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/kyla.b3ar/', label: 'Instagram' },
+    { icon: FaWhatsapp, href: 'https://wa.me/639686654565', label: 'WhatsApp' },
   ]
 
   return (

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp, FaHeart, FaCode, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp, FaHeart, FaCode, FaMapMarkerAlt, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -23,7 +23,9 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/Kylabear', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/kylabangachon-292953256/', label: 'LinkedIn' },
-    { icon: FaEnvelope, href: 'mailto:alphabangachon@gmail.com', label: 'Email' }
+    { icon: FaEnvelope, href: 'mailto:alphabangachon@gmail.com', label: 'Email' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/kyla.b3ar/', label: 'Instagram' },
+    { icon: FaWhatsapp, href: 'https://wa.me/639686654565', label: 'WhatsApp' }
   ]
 
   return (
@@ -46,10 +48,22 @@ const Footer = () => {
               viewport={{ once: true }}
               className="lg:col-span-2"
             >
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white">
-                  <span className="text-xl font-bold">K</span>
-                </div>
+                             <div className="flex items-center space-x-3 mb-4">
+                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg overflow-hidden">
+                   <img
+                     src="/images/Profile.png"
+                     alt="Kyla"
+                     className="w-full h-full object-cover"
+                     onError={(e) => {
+                       const target = e.target as HTMLImageElement;
+                       target.style.display = 'none';
+                       target.nextElementSibling?.classList.remove('hidden');
+                     }}
+                   />
+                   <div className="w-full h-full flex items-center justify-center text-white text-xl font-bold hidden">
+                     K
+                   </div>
+                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">Alpha Kyla Bangachon</h3>
                   <p className="text-gray-400 text-sm">Full Stack Developer</p>
