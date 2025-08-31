@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaEnvelope, FaMapMarkerAlt, FaGraduationCap, FaGithub, FaLinkedin, FaPaperPlane, FaUser, FaSubject } from 'react-icons/fa'
+import { FaEnvelope, FaMapMarkerAlt, FaGraduationCap, FaGithub, FaLinkedin, FaPaperPlane, FaUser, FaFileAlt } from 'react-icons/fa'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -243,10 +243,10 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-gray-300 text-sm font-medium mb-2">
-                  <FaSubject className="w-4 h-4 inline mr-2" />
-                  Subject
-                </label>
+                                  <label htmlFor="subject" className="block text-gray-300 text-sm font-medium mb-2">
+                    <FaFileAlt className="w-4 h-4 inline mr-2" />
+                    Subject
+                  </label>
                 <input
                   type="text"
                   id="subject"
