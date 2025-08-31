@@ -7,12 +7,28 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaBuilding, FaCode, FaUsers
 const Experience = () => {
   const experiences = [
     {
+      title: 'Developer',
+      company: 'Department of Agriculture - Philippines',
+      location: 'Baguio City, Cordillera Administrative Region, Philippines',
+      period: 'Jun 2025 - Present',
+      type: 'Internship',
+      description: 'Intern supporting development initiatives with emphasis on debugging, full‑stack feature work, testing, version control, and documentation to improve system stability and usability.',
+      responsibilities: [
+        'Debugged and resolved critical system issues to ensure stability and functionality across frontend and backend components',
+        'Implemented and optimized new features using full‑stack development practices to improve performance and usability',
+        'Conducted regression, functional, and usability testing to validate fixes and ensure a seamless user experience',
+        'Managed version control and coordinated code integration within the team to maintain a clean, scalable codebase',
+        'Documented technical issues, applied solutions, and maintained development logs for ongoing maintenance and future enhancements'
+      ],
+      skills: ['Debugging', 'Full-Stack Development', 'Testing', 'Version Control', 'Technical Documentation']
+    },
+    {
       title: 'Payroll Assistant',
       company: 'Creotec Philippine Inc.',
       location: 'Laguna Technopark, Binan City, Laguna',
       period: 'May – June 2021',
-      type: 'Part-time',
-      description: 'Assisted in payroll processing and administrative tasks, gaining valuable experience in business operations and data management.',
+      type: 'Internship (Work Immersion)',
+      description: 'Work immersion internship supporting payroll processing and administrative functions during Senior High School.',
       responsibilities: [
         'Processed employee payroll data and maintained accurate records',
         'Assisted with administrative tasks and document management',
@@ -23,18 +39,18 @@ const Experience = () => {
     },
     {
       title: 'Business Assistant',
-      company: 'Work Immersion Program',
-      location: 'Senior High School',
+      company: 'Family-owned Business',
+      location: 'Local / Family Business',
       period: '2018 – 2022',
-      type: 'Internship',
-      description: 'Participated in comprehensive work immersion program, gaining hands-on experience in business operations and administrative functions.',
+      type: 'Family Business',
+      description: 'Assisted in the family-owned business, handling day-to-day operations, customer interactions, and administrative duties.',
       responsibilities: [
         'Supported daily business operations and administrative tasks',
-        'Assisted with customer service and client interactions',
-        'Participated in team meetings and project planning',
+        'Managed customer service and client interactions',
+        'Helped with inventory, ordering, and basic bookkeeping',
         'Developed professional communication and problem-solving skills'
       ],
-      skills: ['Business Operations', 'Customer Service', 'Project Planning', 'Communication']
+      skills: ['Business Operations', 'Customer Service', 'Inventory Management', 'Communication']
     }
   ]
 
@@ -124,17 +140,18 @@ const Experience = () => {
                       </h4>
                       <ul className="space-y-2">
                         {experience.responsibilities.map((responsibility, respIndex) => (
-                          <motion.li
-                            key={respIndex}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4, delay: index * 0.2 + respIndex * 0.1 }}
-                            viewport={{ once: true }}
-                            className="flex items-start text-gray-300 text-sm"
-                          >
-                            <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            {responsibility}
-                          </motion.li>
+                          <li key={respIndex} className="text-gray-300 text-sm">
+                            <motion.div
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.4, delay: index * 0.2 + respIndex * 0.1 }}
+                              viewport={{ once: true }}
+                              className="flex items-start"
+                            >
+                              <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              <span>{responsibility}</span>
+                            </motion.div>
+                          </li>
                         ))}
                       </ul>
                     </div>

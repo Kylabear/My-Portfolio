@@ -12,7 +12,7 @@ const Education = () => {
       track: 'Web Development track',
       institution: 'University of the Cordilleras',
       location: 'Governor Pack Road, Baguio City',
-      period: 'Expected date of graduation: September 2025',
+  period: 'Expected date of graduation: October 2025',
       description: 'Pursuing a comprehensive IT degree with focus on web development, software engineering, and modern technologies.',
       achievements: [
         'Maintaining strong academic performance',

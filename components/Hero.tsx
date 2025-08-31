@@ -43,7 +43,7 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-transparent rounded-[40%_60%_60%_40%/40%_50%_50%_60%]"></div>
 
                   {/* Profile image with organic mask (no outline) */}
-                  <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent">
+                  <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent ring-4 ring-blue-400/40 ring-offset-2 ring-offset-black/10 transition-shadow duration-300 hover:ring-blue-400/60">
                     <img
                       src="/images/HomeProfile.jpg"
                       alt="Alpha Kyla Bangachon - Full Stack Developer"
