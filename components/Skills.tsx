@@ -19,9 +19,9 @@ const Skills = () => {
         { name: 'Kotlin', level: 70 },
         { name: 'PHP', level: 90 },
         { name: 'SQL', level: 85 },
-        { name: 'Perl', level: 65 },
+  // Perl removed per request
         { name: 'R', level: 70 },
-      ]
+  ]
     },
     {
       icon: FaDesktop,
@@ -66,6 +66,7 @@ const Skills = () => {
       skills: [
         { name: 'Flutter', level: 80 },
         { name: 'React Native', level: 75 },
+  { name: 'Android Studio', level: 70 },
       ]
     },
     {
@@ -75,7 +76,7 @@ const Skills = () => {
         { name: 'Figma', level: 85 },
         { name: 'Canva', level: 90 },
         { name: 'Framer', level: 75 },
-        { name: 'Adobe XD', level: 70 },
+  // Adobe XD removed per request
         { name: 'WordPress', level: 80 },
       ]
     },

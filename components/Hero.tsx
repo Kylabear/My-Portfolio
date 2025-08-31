@@ -27,67 +27,62 @@ const Hero = () => {
 
       <div className="container-custom relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Profile Image */}
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-            className="mb-12 flex justify-center"
-          >
-            <div className="relative">
-              {/* Organic shape frame inspired by your screenshot */}
-              <div className="w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 relative">
-                {/* Main organic shape background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-500/20 to-pink-500/20 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] shadow-2xl backdrop-blur-sm border border-white/20"></div>
-                
-                {/* Profile image with organic mask */}
-                <div className="absolute inset-2 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-gradient-to-br from-blue-500/10 to-purple-600/10">
-                  <img
-                    src="/images/Profile.png"
-                    alt="Alpha Kyla Bangachon - Full Stack Developer"
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const fallback = target.parentElement?.querySelector('.fallback-initial');
-                      if (fallback) fallback.classList.remove('hidden');
-                    }}
-                  />
-                  {/* Fallback initial */}
-                  <div className="fallback-initial w-full h-full flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold hidden">
-                    K
-                  </div>
-                </div>
-                
-                {/* Highlight effect */}
-                <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] bg-gradient-to-tr from-white/20 via-transparent to-transparent"></div>
-                
-                {/* Subtle border highlight */}
-                <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] border border-white/30"></div>
-              </div>
-            </div>
-          </motion.div>
+          {/* Profile + Name: side-by-side on md+ screens */}
+          <div className="mb-8 flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+              className="flex-shrink-0 flex justify-center"
+            >
+              <div className="relative">
+                {/* Organic shape frame */}
+                <div className="w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 relative">
+                  {/* Subtle outline ring */}
+                  <div className="absolute -inset-0.5 rounded-[44%_56%_56%_44%/44%_48%_48%_56%] border-2 border-blue-400/20 blur-sm opacity-80 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-transparent rounded-[40%_60%_60%_40%/40%_50%_50%_60%]"></div>
 
-          {/* Greeting Text */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
-          >
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-3 font-light tracking-wide">
-              Hello, I'm
-            </h2>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black gradient-text text-glow mb-6 tracking-tight leading-tight">
-              Alpha Kyla<br />Bangachon
-            </h1>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-3 font-medium">
-              Call Me: <span className="text-blue-400 font-bold">Kyla</span>
-            </h3>
-            <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-wide">
-              Full Stack Developer
-            </h4>
-          </motion.div>
+                  {/* Profile image with organic mask (no outline) */}
+                  <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent">
+                    <img
+                      src="/images/HomeProfile.jpg"
+                      alt="Alpha Kyla Bangachon - Full Stack Developer"
+                      className="w-full h-full object-cover object-center"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const fallback = target.parentElement?.querySelector('.fallback-initial');
+                        if (fallback) fallback.classList.remove('hidden');
+                      }}
+                    />
+                    <div className="fallback-initial w-full h-full flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold invisible">
+                      K
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Name + roles to the right of the image on md+ */}
+            <motion.div
+              initial={{ x: 40, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.9, delay: 0.1 }}
+              className="text-center md:text-left"
+            >
+              <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-light tracking-wide">Hello, I'm</h2>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black gradient-text text-glow mb-3 tracking-tight leading-tight">
+                Alpha Kyla Bangachon
+              </h1>
+              <h3 className="text-sm md:text-base italic text-gray-300 mb-2 font-medium">
+                Call Me <span className="text-blue-400 font-semibold italic">Kyla</span>
+              </h3>
+              <h4 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-4 tracking-wide">Full Stack Developer</h4>
+            </motion.div>
+          </div>
+
+          {/* (Greeting moved beside profile on larger screens) */}
 
           {/* Description */}
           <motion.p
@@ -130,7 +125,7 @@ const Hero = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex justify-center space-x-8 mb-20"
+            className="flex justify-center space-x-8 mb-20 social-row"
           >
             {socialLinks.map((social, index) => (
               <motion.a
@@ -156,7 +151,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
-            className="absolute bottom-16 left-1/2 transform -translate-x-1/2"
+            className="absolute bottom-2 left-1/2 transform -translate-x-1/2 scroll-indicator"
           >
             <motion.div
               animate={{ y: [0, 8, 0] }}

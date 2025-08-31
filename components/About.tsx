@@ -31,13 +31,18 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-6"
         >
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">
             Get to know more about my background, interests, and what drives me in the world of technology
           </p>
         </motion.div>
+
+        {/* Large centered portrait below the About heading */}
+        <div className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 mx-auto rounded-full overflow-hidden mb-10">
+          <img src="/images/Profile.png" alt="Alpha Kyla Bangachon" className="w-full h-full object-cover object-center" />
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Personal Information */}
