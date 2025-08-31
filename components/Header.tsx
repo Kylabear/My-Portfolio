@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,7 +12,6 @@ const Header = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -24,132 +23,128 @@ const Header = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ]
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-    setIsOpen(false)
-  }
+  const socialLinks = [
+    { icon: FaGithub, href: 'https://github.com/Kylabear', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/kylabangachon-292953256/', label: 'LinkedIn' },
+    { icon: FaEnvelope, href: 'mailto:alphabangachon@gmail.com', label: 'Email' },
+  ]
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        scrolled 
+          ? 'glass-card backdrop-blur-lg border-white/20' 
+          : 'bg-transparent'
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg"></div>
-            <span className="text-xl font-bold gradient-text">Kyla</span>
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg md:text-xl">K</span>
+            </div>
+            <span className="text-xl md:text-2xl font-bold gradient-text">Kyla</span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.button
+              <motion.a
                 key={item.name}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300"
+                href={item.href}
+                whileHover={{ y: -2 }}
+                className="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
-              </motion.button>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+              </motion.a>
             ))}
           </nav>
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <motion.a
-              whileHover={{ scale: 1.1, y: -2 }}
-              href="https://github.com/Kylabear"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
-            >
-              <FaGithub size={20} />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.1, y: -2 }}
-              href="https://www.linkedin.com/in/kylabangachon-292953256/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
-            >
-              <FaLinkedin size={20} />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.1, y: -2 }}
-              href="mailto:alphabangachon@gmail.com"
-              className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
-            >
-              <FaEnvelope size={20} />
-            </motion.a>
+            {socialLinks.map((social) => (
+              <motion.a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
+                aria-label={social.label}
+              >
+                <social.icon className="w-4 h-4" />
+              </motion.a>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            className="lg:hidden w-10 h-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
+            aria-label="Toggle menu"
           >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
-          className="md:hidden overflow-hidden bg-white border-t border-gray-100"
-        >
-          <div className="py-4 space-y-2">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 transition-colors duration-300"
-              >
-                {item.name}
-              </button>
-            ))}
-            <div className="px-4 py-2 flex space-x-4">
-              <a
-                href="https://github.com/Kylabear"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
-              >
-                <FaGithub size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kylabangachon-292953256/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
-              >
-                <FaLinkedin size={20} />
-              </a>
-              <a
-                href="mailto:alphabangachon@gmail.com"
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
-              >
-                <FaEnvelope size={20} />
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden glass-card border-t border-white/10"
+          >
+            <div className="container-custom py-6">
+              <nav className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    whileHover={{ x: 10 }}
+                    className="text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2 px-4 rounded-lg hover:bg-white/5"
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+              </nav>
+              
+              {/* Mobile Social Links */}
+              <div className="flex items-center justify-center space-x-4 mt-6 pt-6 border-t border-white/10">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-12 h-12 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg flex items-center justify-center text-white transition-all duration-300"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   )
 }

@@ -1,149 +1,163 @@
 'use client'
 
+import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaUserGraduate } from 'react-icons/fa'
+import { FaUser, FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaCode, FaMobile, FaPalette, FaDatabase, FaServer, FaCloud } from 'react-icons/fa'
 
 const About = () => {
   const personalInfo = [
-    { icon: FaUserGraduate, label: 'Full Name', value: 'Alpha Kyla Bangachon' },
-    { icon: FaUserGraduate, label: 'Nickname', value: 'Kyla' },
+    { icon: FaUser, label: 'Full Name', value: 'Alpha Kyla Bangachon' },
+    { icon: FaUser, label: 'Nickname', value: 'Kyla' },
     { icon: FaGraduationCap, label: 'Course', value: 'BSIT - Web Development Track' },
-    { icon: FaMapMarkerAlt, label: 'University', value: 'University of the Cordilleras' },
+    { icon: FaGraduationCap, label: 'University', value: 'University of the Cordilleras' },
     { icon: FaMapMarkerAlt, label: 'Location', value: 'Baguio City, Philippines' },
     { icon: FaCalendarAlt, label: 'Expected Graduation', value: 'September 2025' },
   ]
 
-  const interests = [
-    'Web Development',
-    'Mobile App Development',
-    'UI/UX Design',
-    'Database Management',
-    'API Development',
-    'Cloud Computing',
-    'Cybersecurity',
-    'Data Analysis',
+  const areasOfInterest = [
+    { icon: FaCode, title: 'Web Development', description: 'Creating modern, responsive web applications' },
+    { icon: FaMobile, title: 'Mobile App Development', description: 'Building cross-platform mobile solutions' },
+    { icon: FaPalette, title: 'UI/UX Design', description: 'Designing intuitive user experiences' },
+    { icon: FaDatabase, title: 'Database Management', description: 'Efficient data storage and retrieval systems' },
+    { icon: FaServer, title: 'Backend Development', description: 'Robust server-side applications and APIs' },
+    { icon: FaCloud, title: 'Cloud Technologies', description: 'Scalable cloud-based solutions' },
   ]
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-gray-900/50">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            About <span className="gradient-text">Me</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get to know more about my background, education, and what drives me in the world of technology.
+          <h2 className="section-title">About Me</h2>
+          <p className="section-subtitle">
+            Get to know more about my background, interests, and what drives me in the world of technology
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Personal Information */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
+            className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Personal Information
             </h3>
+            
             <div className="space-y-4">
               {personalInfo.map((info, index) => (
                 <motion.div
                   key={info.label}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                  className="flex items-center space-x-4 p-4 glass-card-hover"
                 >
-                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <info.icon className="text-primary-600" size={20} />
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white">
+                    <info.icon className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 font-medium">{info.label}</p>
-                    <p className="text-gray-900 font-semibold">{info.value}</p>
+                    <p className="text-gray-400 text-sm font-medium">{info.label}</p>
+                    <p className="text-white font-semibold">{info.value}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* About Content */}
+          {/* Who I Am */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Who I Am
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                I am Alpha Kyla Bangachon, a passionate and dedicated BSIT student at the University of the Cordilleras, 
-                specializing in Web Development. My journey in technology began with a curiosity to understand how digital 
-                solutions can solve real-world problems.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                As a full-stack developer, I enjoy working with both frontend and backend technologies, creating seamless 
-                user experiences and robust server-side solutions. My passion lies in building applications that not only 
-                function flawlessly but also provide meaningful value to users.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                I believe in continuous learning and staying updated with the latest technologies and best practices in 
-                software development. My goal is to contribute to innovative projects that make a positive impact on 
-                people's lives.
-              </p>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Who I Am
+            </h3>
+            
+            <div className="space-y-4">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-gray-300 leading-relaxed responsive-text"
+              >
+                I am a passionate and dedicated BSIT student with a strong foundation in both frontend and backend development. 
+                My journey in technology began with curiosity and has evolved into a deep passion for creating innovative digital solutions.
+              </motion.p>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-gray-300 leading-relaxed responsive-text"
+              >
+                I believe in the power of technology to solve real-world problems and create meaningful experiences. 
+                My approach combines technical expertise with creative problem-solving, ensuring that every project 
+                I work on delivers both functionality and user satisfaction.
+              </motion.p>
             </div>
 
-            {/* Interests */}
-            <div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                Areas of Interest
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {interests.map((interest, index) => (
-                  <motion.span
-                    key={interest}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="px-3 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-200 transition-colors duration-300"
-                  >
-                    {interest}
-                  </motion.span>
-                ))}
-              </div>
-            </div>
+            {/* Mission Statement */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="mt-8 p-6 glass-card border-l-4 border-blue-500"
+            >
+              <h4 className="text-xl font-bold text-white mb-3">My Mission</h4>
+              <p className="text-gray-300 leading-relaxed">
+                To leverage my technical skills and creativity to develop innovative solutions that make a positive impact, 
+                while continuously learning and growing in the ever-evolving field of technology.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
 
-        {/* Additional Info */}
+        {/* Areas of Interest */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16 p-8 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl"
+          className="mt-20"
         >
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              My Mission
-            </h3>
-            <p className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
-              To leverage my technical skills and creativity to develop innovative digital solutions that enhance 
-              user experiences and drive business growth. I strive to contribute to the tech community while 
-              continuously expanding my knowledge and expertise in emerging technologies.
-            </p>
+          <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">
+            Areas of Interest
+          </h3>
+          
+          <div className="responsive-grid">
+            {areasOfInterest.map((area, index) => (
+              <motion.div
+                key={area.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="glass-card-hover p-6 text-center group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <area.icon className="w-8 h-8" />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3">{area.title}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed">{area.description}</p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt, FaCode, FaDatabase, FaMobile, FaPalette } from 'react-icons/fa'
 import React from 'react'
+import { motion } from 'framer-motion'
+import { FaCode, FaExternalLinkAlt, FaGithub, FaDatabase, FaMobile, FaPalette, FaServer, FaLaptop } from 'react-icons/fa'
 
 const Projects = () => {
   const projects = [
@@ -10,208 +10,231 @@ const Projects = () => {
       title: 'Accounting Monitoring System',
       client: 'DA CAR - Accounting Section',
       location: 'Peak Baguio',
-      description: 'A comprehensive accounting management system designed to streamline financial operations and provide real-time monitoring of accounting processes. The system includes features for tracking transactions, generating reports, and managing financial data efficiently.',
-      technologies: ['Next.js', 'Tailwind CSS', 'Laravel', 'MySQL', 'PHP', 'REST APIs'],
+      description: 'A comprehensive accounting system designed to streamline financial operations and provide real-time monitoring of accounting processes.',
+      technologies: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Chart.js'],
       features: [
-        'Real-time financial data monitoring',
-        'Automated report generation',
+        'Financial data management and reporting',
+        'Real-time dashboard with analytics',
         'User authentication and role management',
-        'Responsive dashboard interface',
-        'Data export and backup functionality',
-        'Audit trail and logging system'
+        'Automated calculations and validations',
+        'Export functionality for reports'
       ],
-      image: '/api/placeholder/600/400',
-      github: null,
-      live: null,
-      category: 'Full Stack Web Application'
+      category: 'web',
+      github: 'https://github.com/Kylabear',
+      demo: null
     },
     {
       title: 'E-Commerce Platform',
-      description: 'A modern e-commerce solution built with React and Laravel, featuring a complete shopping experience with product management, user authentication, payment integration, and admin dashboard.',
-      technologies: ['React.js', 'Laravel', 'MySQL', 'Stripe API', 'Tailwind CSS', 'Redux'],
+      client: 'Personal Project',
+      location: 'Baguio City',
+      description: 'A full-featured e-commerce platform with modern design and comprehensive functionality for online retail businesses.',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API'],
       features: [
         'Product catalog and search functionality',
-        'Shopping cart and checkout process',
-        'User account management',
-        'Admin dashboard for product management',
-        'Payment gateway integration',
-        'Order tracking and management'
+        'Shopping cart and checkout system',
+        'User authentication and profiles',
+        'Admin dashboard for management',
+        'Payment integration and order tracking'
       ],
-      image: '/api/placeholder/600/400',
-      github: 'https://github.com/Kylabear/ecommerce-platform',
-      live: null,
-      category: 'E-Commerce Application'
+      category: 'web',
+      github: 'https://github.com/Kylabear',
+      demo: 'https://ecommerce-demo.example.com'
     },
     {
       title: 'Task Management System',
-      description: 'A collaborative task management application that helps teams organize, track, and complete projects efficiently. Features include task assignment, progress tracking, and team collaboration tools.',
-      technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Express.js', 'Socket.io', 'JWT'],
+      client: 'University Project',
+      location: 'University of the Cordilleras',
+      description: 'A collaborative task management application designed to improve team productivity and project coordination.',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Framer Motion'],
       features: [
         'Task creation and assignment',
         'Real-time collaboration',
         'Progress tracking and analytics',
-        'Team management and permissions',
-        'File sharing and attachments',
+        'File sharing and comments',
         'Mobile-responsive design'
       ],
-      image: '/api/placeholder/600/400',
-      github: 'https://github.com/Kylabear/task-manager',
-      live: null,
-      category: 'Collaboration Tool'
+      category: 'web',
+      github: 'https://github.com/Kylabear',
+      demo: 'https://task-manager-demo.example.com'
     },
     {
       title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website showcasing professional skills, projects, and experience. Built with Next.js and Tailwind CSS for optimal performance and user experience.',
-      technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'Responsive Design'],
+      client: 'Personal Portfolio',
+      location: 'Baguio City',
+      description: 'A modern, responsive portfolio website showcasing my skills, projects, and professional experience.',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React Icons'],
       features: [
-        'Responsive and mobile-friendly design',
+        'Responsive design for all devices',
         'Smooth animations and transitions',
+        'Dark theme with glass morphism',
         'SEO optimized structure',
-        'Fast loading performance',
-        'Modern UI/UX design',
-        'Easy content management'
+        'Fast loading and performance'
       ],
-      image: '/api/placeholder/600/400',
-      github: 'https://github.com/Kylabear/portfolio',
-      live: null,
-      category: 'Personal Portfolio'
+      category: 'web',
+      github: 'https://github.com/Kylabear',
+      demo: 'https://kylabear.github.io'
     }
   ]
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('Web')) return FaCode
-    if (category.includes('Mobile')) return FaMobile
-    if (category.includes('Database')) return FaDatabase
-    if (category.includes('Design')) return FaPalette
-    return FaCode
+    switch (category) {
+      case 'web':
+        return FaLaptop
+      case 'mobile':
+        return FaMobile
+      case 'design':
+        return FaPalette
+      case 'backend':
+        return FaServer
+      case 'database':
+        return FaDatabase
+      default:
+        return FaCode
+    }
+  }
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'web':
+        return 'from-blue-500 to-cyan-600'
+      case 'mobile':
+        return 'from-purple-500 to-pink-600'
+      case 'design':
+        return 'from-pink-500 to-red-600'
+      case 'backend':
+        return 'from-green-500 to-emerald-600'
+      case 'database':
+        return 'from-orange-500 to-yellow-600'
+      default:
+        return 'from-gray-500 to-gray-600'
+    }
   }
 
   return (
-    <section id="projects" className="section-padding bg-white">
+    <section id="projects" className="section-padding bg-gray-900/50">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Featured <span className="gradient-text">Projects</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A showcase of my development projects, demonstrating technical skills and problem-solving abilities.
+          <h2 className="section-title">Featured Projects</h2>
+          <p className="section-subtitle">
+            A showcase of my development work, demonstrating technical skills and creative problem-solving
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        {/* Projects Grid */}
+        <div className="responsive-grid mb-16">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
+              key={project.title}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+              whileHover={{ y: -10 }}
+              className="glass-card-hover overflow-hidden group"
             >
-              {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-primary-100 to-secondary-100 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center mx-auto mb-3">
-                      {React.createElement(getCategoryIcon(project.category), { 
-                        size: 32, 
-                        className: "text-primary-600" 
-                      })}
-                    </div>
-                    <p className="text-sm text-gray-600 font-medium">{project.category}</p>
+              {/* Project Header */}
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+                    <project.icon className="w-6 h-6" />
+                  </div>
+                  <div className="text-right">
+                    {project.client && (
+                      <span className="text-xs text-gray-400 font-medium block">{project.client}</span>
+                    )}
+                    {project.location && (
+                      <span className="text-xs text-gray-400 font-medium block">{project.location}</span>
+                    )}
                   </div>
                 </div>
-                
-                {/* Project Links */}
-                <div className="absolute top-4 right-4 flex space-x-2">
-                  {project.github && (
-                    <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors duration-300"
-                    >
-                      <FaGithub size={16} />
-                    </motion.a>
-                  )}
-                  {project.live && (
-                    <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center transition-colors duration-300"
-                    >
-                      <FaExternalLinkAlt size={16} />
-                    </motion.a>
-                  )}
-                </div>
-              </div>
 
-              {/* Project Content */}
-              <div className="p-6">
-                {/* Header */}
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {project.title}
-                  </h3>
-                  {project.client && (
-                    <p className="text-sm text-primary-600 font-medium mb-1">
-                      Client: {project.client}
-                    </p>
-                  )}
-                  {project.location && (
-                    <p className="text-sm text-gray-500">
-                      Location: {project.location}
-                    </p>
-                  )}
-                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                  {project.title}
+                </h3>
 
-                {/* Description */}
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
 
-                {/* Features */}
+                {/* Technologies */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Technologies Used:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <motion.span
+                        key={techIndex}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.2 + techIndex * 0.05 }}
+                        viewport={{ once: true }}
+                        className="px-2 py-1 bg-white/10 border border-white/20 rounded-md text-xs font-medium text-gray-300 hover:bg-white/20 transition-colors duration-300"
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Key Features */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {project.features.slice(0, 3).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start space-x-2">
-                        <div className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-xs text-gray-600">{feature}</span>
-                      </li>
+                      <motion.li
+                        key={featureIndex}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.2 + featureIndex * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-start text-gray-300 text-xs"
+                      >
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        {feature}
+                      </motion.li>
                     ))}
                     {project.features.length > 3 && (
-                      <li className="text-xs text-primary-600 font-medium">
+                      <li className="text-gray-400 text-xs italic">
                         +{project.features.length - 3} more features
                       </li>
                     )}
                   </ul>
                 </div>
 
-                {/* Technologies */}
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Technologies Used:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium hover:bg-gray-200 transition-colors duration-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                {/* Project Links */}
+                <div className="flex gap-3">
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg px-4 py-2 text-center text-white text-sm font-medium transition-all duration-300 hover:border-white/40 group/link"
+                    >
+                      <FaGithub className="w-4 h-4 inline mr-2 group-hover/link:text-blue-400 transition-colors duration-300" />
+                      Code
+                    </motion.a>
+                  )}
+                  
+                  {project.demo && (
+                    <motion.a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg px-4 py-2 text-center text-white text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                      <FaExternalLinkAlt className="w-4 h-4 inline mr-2" />
+                      Live Demo
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -220,37 +243,40 @@ const Projects = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Interested in Working Together?
+          <div className="glass-card p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Let's Work Together
             </h3>
-            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            <p className="text-gray-300 leading-relaxed mb-8 responsive-text">
+              I'm always excited to take on new challenges and collaborate on innovative projects. 
+              Whether you have a specific project in mind or just want to discuss possibilities, 
+              I'd love to hear from you.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
+                href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="mailto:alphabangachon@gmail.com"
                 className="btn-primary"
               >
-                Get In Touch
+                Start a Project
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 href="https://github.com/Kylabear"
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="btn-outline"
               >
-                View More Projects
+                View More on GitHub
               </motion.a>
             </div>
           </div>
