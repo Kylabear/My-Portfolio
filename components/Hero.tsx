@@ -33,10 +33,25 @@ const Hero = () => {
             className="mb-8 flex justify-center"
           >
             <div className="relative">
-              {/* Placeholder for profile image - replace with your actual image */}
+              {/* Your actual profile image - replace profile-photo.jpg with your image file */}
               <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-1 shadow-2xl">
-                <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold">
-                  K
+                <div className="w-full h-full rounded-full bg-gray-800 overflow-hidden">
+                  <img
+                    src="/images/profile-photo.jpg"
+                    alt="Alpha Kyla Bangachon - Full Stack Developer"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to initial if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.parentElement?.querySelector('.fallback-initial');
+                      if (fallback) fallback.classList.remove('hidden');
+                    }}
+                  />
+                  {/* Fallback initial (hidden by default) */}
+                  <div className="fallback-initial w-full h-full flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold hidden">
+                    K
+                  </div>
                 </div>
               </div>
               
