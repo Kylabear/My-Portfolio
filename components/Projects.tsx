@@ -7,9 +7,26 @@ import { FaCode, FaExternalLinkAlt, FaGithub, FaDatabase, FaMobile, FaPalette, F
 const Projects = () => {
   const projects = [
     {
+      title: 'Peak Baguio',
+      client: 'Capstone Project',
+      location: 'Baguio City',
+      description: 'Peak Baguio is our capstone project, designed to provide a platform for local businesses and events in Baguio City. It features listings, reviews, and event management tools to help users discover and connect with the community.',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
+      features: [
+        'Business and event listings',
+        'User reviews and ratings',
+        'Event management and calendar',
+        'Search and filter functionality',
+        'Mobile-responsive design'
+      ],
+      category: 'web',
+      github: 'https://github.com/Kylabear',
+      demo: null
+    },
+    {
       title: 'Accounting Monitoring System',
       client: 'DA CAR - Accounting Section',
-      location: 'Peak Baguio',
+    location: '',
       description: 'A comprehensive accounting system designed to streamline financial operations and provide real-time monitoring of accounting processes.',
       technologies: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Chart.js'],
       features: [
