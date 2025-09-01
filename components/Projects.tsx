@@ -7,17 +7,19 @@ import { FaCode, FaExternalLinkAlt, FaGithub, FaDatabase, FaMobile, FaPalette, F
 const Projects = () => {
   const projects = [
     {
-      title: 'Peak Baguio',
+      title: 'Peak Baguio: Personalized Travel Planning Portal for Baguio City',
       client: 'Capstone Project',
       location: 'Baguio City',
-      description: 'Peak Baguio is our capstone project, designed to provide a platform for local businesses and events in Baguio City. It features listings, reviews, and event management tools to help users discover and connect with the community.',
+  description: `Peak Baguio is a personalized travel planning portal for Baguio City. It helps tourists easily plan visits to the city’s five major attractions by selecting their preferred destination, budget, and time of visit. The platform then generates a tailored itinerary with recommendations for attractions, dining, and activities, making travel planning simple and efficient.`,
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
       features: [
-        'Business and event listings',
-        'User reviews and ratings',
-        'Event management and calendar',
-        'Search and filter functionality',
-        'Mobile-responsive design'
+        'Visually engaging and informative homepage',
+        'Dropdown menus for selecting attractions, budget, and explore period',
+        'Personalized itinerary generation',
+        'Budget-based recommendations for attractions, dining, and activities',
+        'Step-by-step instructions and intuitive navigation',
+        'Mobile-responsive design',
+        'User-friendly experience for first-time and returning visitors'
       ],
       category: 'web',
       github: 'https://github.com/Kylabear',
