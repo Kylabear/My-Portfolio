@@ -11,7 +11,7 @@ const About = () => {
     { icon: FaGraduationCap, label: 'Course', value: 'BSIT - Web Development Track' },
     { icon: FaGraduationCap, label: 'University', value: 'University of the Cordilleras' },
     { icon: FaMapMarkerAlt, label: 'Location', value: 'Baguio City, Philippines' },
-    { icon: FaCalendarAlt, label: 'Expected Graduation', value: 'September 2025' },
+    { icon: FaCalendarAlt, label: 'Expected Graduation', value: 'October 2025' },
   ]
 
   const areasOfInterest = [
