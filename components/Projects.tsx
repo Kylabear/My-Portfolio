@@ -7,7 +7,8 @@ import { FaCode, FaExternalLinkAlt, FaGithub, FaDatabase, FaMobile, FaPalette, F
 const Projects = () => {
   const projects = [
     {
-      title: 'Peak Baguio: Personalized Travel Planning Portal for Baguio City',
+  title: 'Peak Baguio: Personalized Travel Planning Portal for Baguio City',
+  image: '/images/PEAKBAGUIO.png',
       client: 'Capstone Project',
       location: 'Baguio City',
   description: `Peak Baguio is a personalized travel planning portal for Baguio City. It helps tourists easily plan visits to the city’s five major attractions by selecting their preferred destination, budget, and time of visit. The platform then generates a tailored itinerary with recommendations for attractions, dining, and activities, making travel planning simple and efficient.`,
@@ -26,7 +27,8 @@ const Projects = () => {
       demo: null
     },
     {
-      title: 'Accounting Monitoring System',
+  title: 'Accounting Monitoring System',
+  image: '/images/ACCOUNTING.png',
       client: 'DA CAR - Accounting Section',
     location: '',
       description: 'A comprehensive accounting system designed to streamline financial operations and provide real-time monitoring of accounting processes.',
@@ -43,41 +45,27 @@ const Projects = () => {
       demo: null
     },
     {
-      title: 'E-Commerce Platform',
-      client: 'Personal Project',
-      location: 'Baguio City',
-      description: 'A full-featured e-commerce platform with modern design and comprehensive functionality for online retail businesses.',
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API'],
+  title: 'Contraceptech App',
+  image: '/images/CONTACEPTECH.png',
+      client: 'Capstone Project',
+      location: '',
+      description: `A mobile application that directly addresses the issues of limited access, cultural stigma, and privacy concerns regarding family planning and reproductive health.`,
+  technologies: ['Android Studio', 'Kotlin', 'JavaScript', 'Firebase'],
       features: [
-        'Product catalog and search functionality',
-        'Shopping cart and checkout system',
-        'User authentication and profiles',
-        'Admin dashboard for management',
-        'Payment integration and order tracking'
+        'Open Forum for community discussions',
+        'AI-powered chatbot for instant answers',
+        'Telehealth consultations with professionals',
+        'Privacy-focused user experience',
+        'Accessible to all genders, ages 15 and above, and parents',
+        'Promotes family planning and education'
       ],
-      category: 'web',
+      category: 'mobile',
       github: 'https://github.com/Kylabear',
-      demo: 'https://ecommerce-demo.example.com'
+      demo: null
     },
     {
-      title: 'Task Management System',
-      client: 'University Project',
-      location: 'University of the Cordilleras',
-      description: 'A collaborative task management application designed to improve team productivity and project coordination.',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Framer Motion'],
-      features: [
-        'Task creation and assignment',
-        'Real-time collaboration',
-        'Progress tracking and analytics',
-        'File sharing and comments',
-        'Mobile-responsive design'
-      ],
-      category: 'web',
-      github: 'https://github.com/Kylabear',
-      demo: 'https://task-manager-demo.example.com'
-    },
-    {
-      title: 'Portfolio Website',
+  title: 'Portfolio Website',
+  image: '/images/PORTFOLIO.png',
       client: 'Personal Portfolio',
       location: 'Baguio City',
       description: 'A modern, responsive portfolio website showcasing my skills, projects, and professional experience.',
@@ -157,6 +145,16 @@ const Projects = () => {
               whileHover={{ y: -10 }}
               className="glass-card-hover overflow-hidden group"
             >
+              {/* Project Image */}
+              {project.image && (
+                <div className="w-full h-48 bg-gray-800 flex items-center justify-center overflow-hidden mb-4">
+                  <img
+                    src={project.image}
+                    alt={project.title + ' image'}
+                    className="object-contain h-full w-full"
+                  />
+                </div>
+              )}
               {/* Project Header */}
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
