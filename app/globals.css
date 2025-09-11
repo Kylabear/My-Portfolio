@@ -1,7 +1,3 @@
-/* Creative blob shape for profile image */
-.profile-blob {
-  clip-path: path('M 70 10 Q 100 0 130 20 Q 160 40 150 80 Q 140 120 100 130 Q 60 140 40 110 Q 20 80 30 40 Q 40 0 70 10 Z');
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,43 +41,158 @@
 
 @layer components {
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    padding-top: 4rem;   /* py-16 */
+    padding-bottom: 4rem;
+    padding-left: 1rem;  /* px-4 */
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .section-padding {
+      padding-left: 1.5rem; /* sm:px-6 */
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-left: 2rem; /* lg:px-8 */
+      padding-right: 2rem;
+    }
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    max-width: 80rem; /* Tailwind's max-w-7xl is 80rem */
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+    transition: all 0.3s;
+  }
+  .card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(30, 41, 59, 0.25);
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    background-image: linear-gradient(to right, #2563eb, #7c3aed);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    transform: scale(1);
+    box-shadow: none;
+    outline: none;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-image: linear-gradient(to right, #1d4ed8, #6d28d9);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+  }
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px #1a1a1a;
   }
   
   .btn-secondary {
-    @apply bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    background: linear-gradient(to right, #374151, #1f2937);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    transform: scale(1);
+    box-shadow: none;
+    outline: none;
+    border: none;
+  }
+  .btn-secondary:hover {
+    background: linear-gradient(to right, #4b5563, #374151);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(55, 65, 81, 0.2);
+  }
+  .btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #6b7280, 0 0 0 4px #1a1a1a;
   }
   
   .btn-outline {
-    @apply border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #3b82f6;
+    color: #3b82f6;
+    font-weight: 600;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    transform: scale(1);
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background-color: #3b82f6;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  .btn-outline:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px #1a1a1a;
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-2xl;
+    background-color: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0,0,0,0.06);
   }
 
   .glass-card-hover {
-    @apply glass-card hover:bg-white/10 hover:border-white/20 transition-all duration-300;
+    background-color: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+  }
+  .glass-card-hover:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.20);
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 gradient-text;
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    text-align: center; /* text-center */
+    margin-bottom: 1rem; /* mb-4 */
+    background: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6); /* gradient-text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3rem; /* md:text-5xl */
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-title {
+      font-size: 3.75rem; /* lg:text-6xl */
+    }
   }
 
   .section-subtitle {
@@ -89,19 +200,88 @@
   }
 
   .responsive-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .responsive-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .responsive-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .responsive-grid {
+      gap: 2rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .responsive-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   .responsive-text {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .responsive-text {
+      font-size: 1rem; /* sm:text-base */
+      line-height: 1.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .responsive-text {
+      font-size: 1.125rem; /* md:text-lg */
+      line-height: 1.75rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .responsive-text {
+      font-size: 1.25rem; /* lg:text-xl */
+      line-height: 1.75rem;
+    }
   }
 
   .responsive-padding {
-    @apply p-4 sm:p-6 md:p-8 lg:p-12;
+    padding: 1rem;
+  }
+  @media (min-width: 640px) {
+    .responsive-padding {
+      padding: 1.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .responsive-padding {
+      padding: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .responsive-padding {
+      padding: 3rem;
+    }
   }
 
   .responsive-margin {
-    @apply m-4 sm:m-6 md:m-8 lg:m-12;
+    margin: 1rem;
+  }
+  @media (min-width: 640px) {
+    .responsive-margin {
+      margin: 1.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .responsive-margin {
+      margin: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .responsive-margin {
+      margin: 3rem;
+    }
   }
 }
 
@@ -153,18 +333,21 @@
 /* Responsive breakpoints */
 @media (max-width: 640px) {
   .mobile-first {
-    @apply text-sm;
+    font-size: 0.875rem; /* text-sm in Tailwind */
+    line-height: 1.25rem; /* text-sm line-height */
   }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
   .tablet-optimized {
-    @apply text-base;
+    font-size: 1rem; /* text-base in Tailwind */
+    line-height: 1.5rem; /* text-base line-height */
   }
 }
 
 @media (min-width: 1025px) {
   .desktop-enhanced {
-    @apply text-lg;
+    font-size: 1.125rem; /* text-lg in Tailwind */
+    line-height: 1.75rem; /* text-lg line-height */
   }
 }
