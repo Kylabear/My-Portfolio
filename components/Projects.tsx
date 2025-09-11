@@ -12,7 +12,7 @@ const Projects = () => {
       client: 'Capstone Project',
       location: 'Baguio City',
   description: `Peak Baguio is a personalized travel planning portal for Baguio City. It helps tourists easily plan visits to the city’s five major attractions by selecting their preferred destination, budget, and time of visit. The platform then generates a tailored itinerary with recommendations for attractions, dining, and activities, making travel planning simple and efficient.`,
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
+  technologies: ['React.js', 'Node.js', 'Tailwind CSS', 'Firebase'],
       features: [
         'Visually engaging and informative homepage',
         'Dropdown menus for selecting attractions, budget, and explore period',
@@ -32,7 +32,7 @@ const Projects = () => {
       client: 'DA CAR - Accounting Section',
     location: '',
       description: 'A comprehensive accounting system designed to streamline financial operations and provide real-time monitoring of accounting processes.',
-      technologies: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Chart.js'],
+  technologies: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Chart.js', 'React.js', 'Tailwind CSS'],
       features: [
         'Financial data management and reporting',
         'Real-time dashboard with analytics',
@@ -79,7 +79,7 @@ const Projects = () => {
       ],
       category: 'web',
       github: 'https://github.com/Kylabear',
-      demo: 'https://kylabear.github.io'
+  demo: null
     }
   ]
 

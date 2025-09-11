@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { FaCertificate, FaLinkedin, FaGithub, FaExternalLinkAlt, FaTrophy, FaStar, FaAward } from 'react-icons/fa'
 
 const Certifications = () => {
+  const [showAll, setShowAll] = React.useState(false);
   const certifications = [
     {
       title: 'AKYLADE Certified Cyber Resilience Fundamentals CRF-002 (A/CCRF)',
@@ -362,7 +363,7 @@ const Certifications = () => {
 
         {/* Certifications Grid */}
         <div className="responsive-grid mb-16">
-          {certifications.map((cert, index) => (
+          {(showAll ? certifications : certifications.slice(0, 4)).map((cert, index) => (
             <motion.div
               key={`${cert.title}-${cert.date}`}
               initial={{ opacity: 0, y: 30 }}
@@ -439,6 +440,26 @@ const Certifications = () => {
             </motion.div>
           ))}
         </div>
+        {/* See More Button */}
+        {certifications.length > 4 && (
+          <div className="flex justify-center mb-8">
+            {!showAll ? (
+              <button
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition-colors duration-200"
+                onClick={() => setShowAll(true)}
+              >
+                See More
+              </button>
+            ) : (
+              <button
+                className="px-6 py-2 bg-gray-600 text-white rounded-lg font-semibold shadow hover:bg-gray-700 transition-colors duration-200"
+                onClick={() => setShowAll(false)}
+              >
+                See Less
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Commitment to Learning */}
         <motion.div

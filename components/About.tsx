@@ -48,8 +48,13 @@ const About = () => {
           </div>
           {/* Right side: Profile Image */}
           <div className="flex-1 flex items-center justify-center">
-            <div className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden flex items-center justify-center bg-gray-700">
-              <img src="/images/Profile.png" alt="Alpha Kyla Bangachon" className="w-full h-full object-cover object-center" />
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
+              {/* Organic shape frame copied from Hero.tsx */}
+              <div className="absolute -inset-0.5 rounded-[44%_56%_56%_44%/44%_48%_48%_56%] border-2 border-blue-400/20 blur-sm opacity-80 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-transparent rounded-[40%_60%_60%_40%/40%_50%_50%_60%]"></div>
+              <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent ring-4 ring-blue-400/40 ring-offset-2 ring-offset-black/10 transition-shadow duration-300 hover:ring-blue-400/60 flex items-center justify-center">
+                <img src="/images/Profile.png" alt="Alpha Kyla Bangachon" className="w-full h-full object-cover object-center" />
+              </div>
             </div>
           </div>
         </div>

@@ -1,3 +1,7 @@
+/* Creative blob shape for profile image */
+.profile-blob {
+  clip-path: path('M 70 10 Q 100 0 130 20 Q 160 40 150 80 Q 140 120 100 130 Q 60 140 40 110 Q 20 80 30 40 Q 40 0 70 10 Z');
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
