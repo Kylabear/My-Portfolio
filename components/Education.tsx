@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaTrophy, FaCode, FaUsers, FaLightbulb, FaCertificate } from 'react-icons/fa'
 
 const Education = () => {
+  const [showAllSeminars, setShowAllSeminars] = React.useState(false);
   const education = [
     {
       level: 'Undergraduate',
@@ -236,7 +237,7 @@ const Education = () => {
           </h3>
           
           <div className="responsive-grid">
-            {seminars.map((seminar, index) => (
+            {(showAllSeminars ? seminars : seminars.slice(0, 4)).map((seminar, index) => (
               <motion.div
                 key={`${seminar.title}-${seminar.date}`}
                 initial={{ opacity: 0, y: 30 }}
@@ -264,6 +265,26 @@ const Education = () => {
               </motion.div>
             ))}
           </div>
+          {/* See More/See Less Button */}
+          {seminars.length > 4 && (
+            <div className="flex justify-center mb-8">
+              {!showAllSeminars ? (
+                <button
+                  className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition-colors duration-200"
+                  onClick={() => setShowAllSeminars(true)}
+                >
+                  See More
+                </button>
+              ) : (
+                <button
+                  className="px-6 py-2 bg-gray-600 text-white rounded-lg font-semibold shadow hover:bg-gray-700 transition-colors duration-200"
+                  onClick={() => setShowAllSeminars(false)}
+                >
+                  See Less
+                </button>
+              )}
+            </div>
+          )}
         </motion.div>
 
         {/* Learning Philosophy */}
