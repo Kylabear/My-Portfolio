@@ -50,6 +50,17 @@ const Projects: React.FC = () => {
       demo: null,
     },
     {
+      title: 'Peak Baguio Events Website',
+      image: '/images/PEAKBAGUIO.png',
+      client: 'Event Project',
+      description: 'A marketing website for Peak Baguio events showcasing schedules, ticketing information, and galleries.',
+      technologies: ['Next.js', 'Tailwind CSS', 'JavaScript'],
+      features: ['Event schedules', 'Gallery', 'Ticket information'],
+      category: 'web',
+      github: '',
+      demo: null,
+    },
+    {
       title: 'Portfolio Website',
       image: '/images/PORTFOLIO.png',
       client: 'Personal Portfolio',

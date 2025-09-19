@@ -267,7 +267,8 @@ const Education = () => {
           </div>
           {/* See More/See Less Button */}
           {seminars.length > 4 && (
-            <div className="flex justify-center mb-8">
+            // add top margin so the button sits further below the seminars grid
+            <div className="flex justify-center mt-8 mb-8">
               {!showAllSeminars ? (
                 <button
                   className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition-colors duration-200"

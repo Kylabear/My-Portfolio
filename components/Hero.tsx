@@ -37,7 +37,7 @@ const Hero = () => {
             >
               <div className="relative">
                 {/* Organic shape frame */}
-                <div className="w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 relative">
+                <div className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 relative">
                   {/* Subtle outline ring */}
                   <div className="absolute -inset-0.5 rounded-[44%_56%_56%_44%/44%_48%_48%_56%] border-2 border-blue-400/20 blur-sm opacity-80 pointer-events-none"></div>
                   <div className="absolute inset-0 bg-transparent rounded-[40%_60%_60%_40%/40%_50%_50%_60%]"></div>
@@ -45,7 +45,7 @@ const Hero = () => {
                   {/* Profile image with organic mask (no outline) */}
                   <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent ring-4 ring-blue-400/40 ring-offset-2 ring-offset-black/10 transition-shadow duration-300 hover:ring-blue-400/60">
                     <img
-                      src="/images/HomeProfile.jpg"
+                      src="/images/Profile.png"
                       alt="Alpha Kyla Bangachon - Full Stack Developer"
                       className="w-full h-full object-cover object-center"
                       onError={(e) => {
@@ -55,7 +55,7 @@ const Hero = () => {
                         if (fallback) fallback.classList.remove('hidden');
                       }}
                     />
-                    <div className="fallback-initial w-full h-full flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold invisible">
+                    <div className="fallback-initial w-full h-full flex items-center justify-center text-white text-5xl md:text-6xl lg:text-7xl font-bold invisible">
                       K
                     </div>
                   </div>
@@ -117,6 +117,15 @@ const Hero = () => {
               className="btn-outline"
             >
               Contact Me
+            </motion.a>
+            <motion.a
+              href="/images/CV_Kyla2025.pdf"
+              download="CV_Kyla2025.pdf"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-5 py-3 rounded-md bg-gray-800 text-white hover:bg-gray-700 transition"
+            >
+              Download CV
             </motion.a>
           </motion.div>
 

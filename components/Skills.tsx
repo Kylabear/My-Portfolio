@@ -11,30 +11,29 @@ const Skills = () => {
       title: 'Programming Languages',
       skills: [
         { name: 'JavaScript', level: 90 },
+        { name: 'Java', level: 85 },
+        { name: 'PHP', level: 85 },
+        { name: 'Kotlin', level: 80 },
+        { name: 'SQL', level: 80 },
         { name: 'Python', level: 85 },
-        { name: 'Java', level: 80 },
         { name: 'C++', level: 75 },
         { name: 'C#', level: 75 },
         { name: 'TypeScript', level: 85 },
-        { name: 'Kotlin', level: 70 },
-        { name: 'PHP', level: 90 },
-        { name: 'SQL', level: 85 },
-  // Perl removed per request
         { name: 'R', level: 70 },
-  ]
+      ]
     },
     {
       icon: FaDesktop,
       title: 'Frontend Technologies',
       skills: [
-        { name: 'React.js', level: 90 },
-        { name: 'Next.js', level: 85 },
+        { name: 'React.js', level: 95 },
+        { name: 'Tailwind CSS', level: 92 },
+        { name: 'Next.js', level: 90 },
+        { name: 'Bootstrap', level: 85 },
         { name: 'Angular', level: 80 },
+        { name: 'HTML5', level: 80 },
         { name: 'Vue.js', level: 75 },
-        { name: 'HTML5', level: 95 },
-        { name: 'CSS3', level: 90 },
-        { name: 'Tailwind CSS', level: 85 },
-        { name: 'Bootstrap', level: 80 },
+        { name: 'CSS3', level: 75 },
       ]
     },
     {
@@ -42,21 +41,21 @@ const Skills = () => {
       title: 'Backend Technologies',
       skills: [
         { name: 'Laravel', level: 90 },
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
-        { name: 'REST APIs', level: 90 },
-        { name: 'GraphQL', level: 75 },
         { name: 'PHP', level: 90 },
+        { name: 'Node.js', level: 88 },
+        { name: 'GraphQL', level: 82 },
+        { name: 'Express.js', level: 80 },
+        { name: 'REST APIs', level: 78 },
       ]
     },
     {
       icon: FaDatabase,
       title: 'Database Technologies',
       skills: [
-        { name: 'MySQL', level: 90 },
-        { name: 'PostgreSQL', level: 85 },
+        { name: 'MySQL', level: 95 },
+        { name: 'Firebase', level: 90 },
+        { name: 'PostgreSQL', level: 80 },
         { name: 'MariaDB', level: 80 },
-        { name: 'Firebase', level: 85 },
         { name: 'MongoDB', level: 75 },
       ]
     },
@@ -64,49 +63,48 @@ const Skills = () => {
       icon: FaMobile,
       title: 'Mobile Development',
       skills: [
-        { name: 'Flutter', level: 80 },
-        { name: 'React Native', level: 75 },
-  { name: 'Android Studio', level: 70 },
+        { name: 'Android Studio', level: 75 },
+        { name: 'React Native', level: 70 },
+        { name: 'Flutter', level: 60 },
       ]
     },
     {
       icon: FaPalette,
-      title: 'Design & Tools',
+      title: 'Design Tools',
       skills: [
-        { name: 'Figma', level: 85 },
         { name: 'Canva', level: 90 },
-        { name: 'Framer', level: 75 },
-  // Adobe XD removed per request
-        { name: 'WordPress', level: 80 },
+        { name: 'Figma', level: 85 },
+        { name: 'Framer', level: 70 },
+        { name: 'WordPress', level: 70 },
       ]
     },
     {
       icon: FaTools,
       title: 'Development Tools',
       skills: [
-        { name: 'VS Code', level: 95 },
-        { name: 'Docker', level: 75 },
-        { name: 'Postman', level: 85 },
-        { name: 'Terminal', level: 90 },
+        { name: 'VS Code', level: 96 },
         { name: 'Git & GitHub', level: 90 },
+        { name: 'Docker', level: 75 },
+        { name: 'Postman', level: 75 },
+        { name: 'Terminal', level: 73 },
       ]
     },
     {
       icon: FaCloud,
       title: 'Cloud & DevOps',
       skills: [
-        { name: 'AWS', level: 75 },
-        { name: 'Firebase', level: 85 },
-        { name: 'Vercel', level: 80 },
+        { name: 'Firebase', level: 90 },
+        { name: 'Vercel', level: 87 },
         { name: 'Netlify', level: 80 },
-        { name: 'CI/CD', level: 70 },
+        { name: 'Railway', level: 80 },
+        { name: 'AWS', level: 80 },
       ]
     }
   ]
 
   const softSkills = [
     'Problem Solving', 'Critical Thinking', 'Team Collaboration', 'Project Management',
-    'Communication', 'Time Management', 'Adaptability', 'Continuous Learning',
+    'Time Management', 'Adaptability', 'Continuous Learning',
     'Attention to Detail', 'Analytical Thinking', 'Creativity', 'Leadership'
   ]
 

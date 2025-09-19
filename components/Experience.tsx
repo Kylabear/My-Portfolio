@@ -7,7 +7,7 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaBuilding, FaCode, FaUsers
 const Experience = () => {
   const experiences = [
     {
-      title: 'Developer',
+      title: 'Full Stack Developer',
       company: 'Department of Agriculture - Philippines',
       location: 'Baguio City, Cordillera Administrative Region, Philippines',
       period: 'Jun 2025 - Present',
