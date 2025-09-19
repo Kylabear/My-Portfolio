@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
       demo: null,
     },
     {
-      title: 'Contraceptech App',
+      title: 'Contraceptech',
       image: '/images/CONTACEPTECH.png',
       client: 'Capstone Project',
       description:
@@ -96,11 +96,12 @@ const Projects: React.FC = () => {
               className="glass-card-hover overflow-hidden group cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="w-full h-48 bg-gray-800 flex items-center justify-center overflow-hidden mb-4">
-                <img src={project.image} alt={project.title + ' image'} className="object-contain h-full w-full" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 text-center">{project.title}</h3>
+              <div className="relative w-full h-48 bg-gray-800 overflow-hidden">
+                <img src={project.image} alt={project.title + ' image'} className="block object-cover h-full w-full" />
+                {/* Overlay title - centered */}
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center px-4">
+                  <h3 className="text-lg md:text-xl font-serif text-white text-center drop-shadow tracking-wide">{project.title}</h3>
+                </div>
               </div>
             </motion.div>
           ))}
