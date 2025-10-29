@@ -5,6 +5,40 @@ import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 const Hero = () => {
+  const fullName = 'Alpha Kyla Bangachon'
+  const [typedName, setTypedName] = React.useState('')
+
+  React.useEffect(() => {
+    let index = 0
+    let deleting = false
+    let isMounted = true
+
+    const tick = () => {
+      if (!isMounted) return
+      if (!deleting) {
+        setTypedName(fullName.slice(0, index + 1))
+        index += 1
+        if (index === fullName.length) {
+          deleting = true
+          setTimeout(tick, 1200) // pause at full name
+          return
+        }
+        setTimeout(tick, 80)
+      } else {
+        setTypedName(fullName.slice(0, index - 1))
+        index -= 1
+        if (index === 0) {
+          deleting = false
+          setTimeout(tick, 600) // pause at empty
+          return
+        }
+        setTimeout(tick, 40)
+      }
+    }
+
+    const start = setTimeout(tick, 200)
+    return () => { isMounted = false; clearTimeout(start) }
+  }, [])
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/Kylabear', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/kylabangachon-292953256/', label: 'LinkedIn' },
@@ -73,7 +107,8 @@ const Hero = () => {
             >
               <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-light tracking-wide">Hello, I'm</h2>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black gradient-text text-glow mb-3 tracking-tight leading-tight">
-                Alpha Kyla Bangachon
+                {typedName}
+                <span className="inline-block w-1 h-[1.1em] align-[-0.1em] bg-white/80 ml-1 animate-pulse"></span>
               </h1>
               <h3 className="text-sm md:text-base italic text-gray-300 mb-2 font-medium">
                 Call Me <span className="text-blue-400 font-semibold italic">Kyla</span>

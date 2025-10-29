@@ -2,57 +2,11 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { experienceData } from '@/data/content'
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaBuilding, FaCode, FaUsers, FaChartLine, FaCog } from 'react-icons/fa'
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: 'Full Stack Developer',
-      company: 'Department of Agriculture - Philippines',
-      location: 'Baguio City, Cordillera Administrative Region, Philippines',
-      period: 'Jun 2025 - August 2025',
-      type: 'Internship',
-      description: 'Intern supporting development initiatives with emphasis on debugging, full‑stack feature work, testing, version control, and documentation to improve system stability and usability.',
-      responsibilities: [
-        'Debugged and resolved critical system issues to ensure stability and functionality across frontend and backend components',
-        'Implemented and optimized new features using full‑stack development practices to improve performance and usability',
-        'Conducted regression, functional, and usability testing to validate fixes and ensure a seamless user experience',
-        'Managed version control and coordinated code integration within the team to maintain a clean, scalable codebase',
-        'Documented technical issues, applied solutions, and maintained development logs for ongoing maintenance and future enhancements'
-      ],
-      skills: ['Debugging', 'Full-Stack Development', 'Testing', 'Version Control', 'Technical Documentation']
-    },
-    {
-      title: 'Payroll Assistant',
-      company: 'Creotec Philippine Inc.',
-      location: 'Laguna Technopark, Binan City, Laguna',
-      period: 'May – June 2021',
-      type: 'Internship (Work Immersion)',
-      description: 'Work immersion internship supporting payroll processing and administrative functions during Senior High School.',
-      responsibilities: [
-        'Processed employee payroll data and maintained accurate records',
-        'Assisted with administrative tasks and document management',
-        'Collaborated with HR team on various projects',
-        'Developed strong organizational and time management skills'
-      ],
-      skills: ['Data Processing', 'Administrative Support', 'Team Collaboration', 'Time Management']
-    },
-    {
-      title: 'Business Assistant',
-      company: 'Family-owned Business',
-      location: 'Alfonso Lista, Ifugao',
-      period: '2018 – present',
-      type: 'Family Business',
-      description: 'Assisted in the family-owned business, handling day-to-day operations, customer interactions, and administrative duties.',
-      responsibilities: [
-        'Supported daily business operations and administrative tasks',
-        'Managed customer service and client interactions',
-        'Helped with inventory and ordering',
-        'Developed professional communication and problem-solving skills'
-      ],
-      skills: ['Business Operations', 'Customer Service', 'Inventory Management', 'Communication']
-    }
-  ]
+  const experiences = experienceData
 
   const skillsDeveloped = [
     'Data Management', 'Administrative Support', 'Team Collaboration', 'Time Management',
