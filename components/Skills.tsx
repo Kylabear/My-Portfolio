@@ -106,7 +106,7 @@ const Skills = () => {
   const softSkills = [
     'Problem Solving', 'Critical Thinking', 'Team Collaboration', 'Project Management',
     'Time Management', 'Adaptability', 'Continuous Learning',
-    'Attention to Detail', 'Analytical Thinking', 'Creativity', 'Leadership'
+    'Attention to Detail', 'Analytical Thinking', 'Creativity', 'Customer Service', 'Foreign Language'
   ]
 
   return (
@@ -126,7 +126,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Technical Skills */}
-        <div className="responsive-grid mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {(showAllCategories ? skillCategories : skillCategories.slice(0, 3)).map((category, categoryIndex) => (
             <motion.div
               key={category.title}
