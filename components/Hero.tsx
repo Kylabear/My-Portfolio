@@ -17,9 +17,9 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-float"></div>
-    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-500/20 to-blue-600/20 rounded-full blur-3xl animate-float animate-delay-2s"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-pink-300/25 to-indigo-300/25 rounded-full blur-3xl animate-float"></div>
+    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-rose-300/25 to-sky-300/25 rounded-full blur-3xl animate-float animate-delay-2s"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-indigo-300/20 to-pink-300/20 rounded-full blur-3xl animate-pulse-slow"></div>
       </div>
 
       {/* Grid Pattern */}

@@ -8,12 +8,12 @@ const Education = () => {
   const [showAllSeminars, setShowAllSeminars] = React.useState(false);
   const education = [
     {
-      level: 'Undergraduate',
+      level: 'Graduate',
       degree: 'Bachelor of Science in Information Technology',
-      track: 'Web Development track',
+      track: 'Web Technology Track',
       institution: 'University of the Cordilleras',
       location: 'Governor Pack Road, Baguio City',
-  period: 'Expected date of graduation: October 2025',
+  period: 'October 2025',
       description: 'Pursuing a comprehensive IT degree with focus on web development, software engineering, and modern technologies.',
       achievements: [
         'Maintaining strong academic performance',
@@ -42,6 +42,12 @@ const Education = () => {
   ]
 
   const seminars = [
+    {
+      title: 'DevFest Baguio 2025',
+      date: 'Oct 18, 2025',
+      venue: 'Baguio Convention Hall',
+      description: 'Annual developer festival featuring the latest in technology, networking opportunities, and skill development workshops.'
+    },
     {
       title: 'DevFest Baguio 2023',
       date: 'Nov 11, 2023',
@@ -117,7 +123,7 @@ const Education = () => {
         {/* Education Timeline */}
         <div className="relative mb-20">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sky-300 via-violet-300 to-pink-300"></div>
 
           <div className="space-y-12">
             {education.map((edu, index) => (
@@ -132,7 +138,7 @@ const Education = () => {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-gray-900 z-10"></div>
+                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-pink-300 to-indigo-300 rounded-full border-4 border-gray-900 z-10"></div>
 
                 {/* Content Card */}
                 <div className={`ml-12 md:ml-0 md:w-5/12 ${
@@ -143,7 +149,7 @@ const Education = () => {
                     className="glass-card-hover p-6 relative"
                   >
                     {/* Level Badge */}
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-teal-300 to-sky-300 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
                       {edu.level}
                     </div>
 
@@ -248,7 +254,7 @@ const Education = () => {
                 className="glass-card-hover p-6"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-rose-300 to-sky-300 rounded-xl flex items-center justify-center text-white flex-shrink-0">
                     <FaCertificate className="w-6 h-6" />
                   </div>
                   <div className="text-right">

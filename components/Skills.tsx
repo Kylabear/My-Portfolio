@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { FaCode, FaDesktop, FaServer, FaDatabase, FaMobile, FaPalette, FaTools, FaCloud } from 'react-icons/fa'
 
 const Skills = () => {
+  const [showAllCategories, setShowAllCategories] = React.useState(false)
   const skillCategories = [
     {
       icon: FaCode,
@@ -126,7 +127,7 @@ const Skills = () => {
 
         {/* Technical Skills */}
         <div className="responsive-grid mb-16">
-          {skillCategories.map((category, categoryIndex) => (
+          {(showAllCategories ? skillCategories : skillCategories.slice(0, 3)).map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
@@ -136,7 +137,7 @@ const Skills = () => {
               className="glass-card-hover p-6"
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-300 to-indigo-300 rounded-xl flex items-center justify-center text-white mr-4">
                   <category.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-white">{category.title}</h3>
@@ -154,7 +155,7 @@ const Skills = () => {
                   >
                     <div className="flex justify-between items-center">
                       <span className="text-gray-300 text-sm font-medium">{skill.name}</span>
-                      <span className="text-blue-400 text-sm font-semibold">{skill.level}%</span>
+                      <span className="text-pink-300 text-sm font-semibold">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <motion.div
@@ -162,7 +163,7 @@ const Skills = () => {
                         whileInView={{ width: `${skill.level}%` }}
                         transition={{ duration: 1, delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.5 }}
                         viewport={{ once: true }}
-                        className="h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-500"
+                        className="h-2 bg-gradient-to-r from-pink-300 to-indigo-300 rounded-full transition-all duration-500"
                       />
                     </div>
                   </motion.div>
@@ -171,6 +172,27 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* See More/See Less Button for Categories */}
+        {skillCategories.length > 3 && (
+          <div className="flex justify-center mt-2 mb-16">
+            {!showAllCategories ? (
+              <button
+                className="px-6 py-2 rounded-lg font-semibold shadow transition-colors duration-200 text-gray-900 bg-gradient-to-r from-pink-300 to-indigo-300 hover:from-pink-400 hover:to-indigo-400"
+                onClick={() => setShowAllCategories(true)}
+              >
+                See More
+              </button>
+            ) : (
+              <button
+                className="px-6 py-2 rounded-lg font-semibold shadow transition-colors duration-200 text-white bg-gray-700 hover:bg-gray-600"
+                onClick={() => setShowAllCategories(false)}
+              >
+                See Less
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Additional Skills & Competencies */}
         <motion.div

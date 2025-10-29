@@ -10,7 +10,7 @@ const Experience = () => {
       title: 'Full Stack Developer',
       company: 'Department of Agriculture - Philippines',
       location: 'Baguio City, Cordillera Administrative Region, Philippines',
-      period: 'Jun 2025 - Present',
+      period: 'Jun 2025 - August 2025',
       type: 'Internship',
       description: 'Intern supporting development initiatives with emphasis on debugging, full‑stack feature work, testing, version control, and documentation to improve system stability and usability.',
       responsibilities: [
@@ -40,14 +40,14 @@ const Experience = () => {
     {
       title: 'Business Assistant',
       company: 'Family-owned Business',
-      location: 'Local / Family Business',
-      period: '2018 – 2022',
+      location: 'Alfonso Lista, Ifugao',
+      period: '2018 – present',
       type: 'Family Business',
       description: 'Assisted in the family-owned business, handling day-to-day operations, customer interactions, and administrative duties.',
       responsibilities: [
         'Supported daily business operations and administrative tasks',
         'Managed customer service and client interactions',
-        'Helped with inventory, ordering, and basic bookkeeping',
+        'Helped with inventory and ordering',
         'Developed professional communication and problem-solving skills'
       ],
       skills: ['Business Operations', 'Customer Service', 'Inventory Management', 'Communication']
@@ -78,7 +78,7 @@ const Experience = () => {
         {/* Experience Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sky-300 via-violet-300 to-pink-300"></div>
 
           <div className="space-y-12">
             {experiences.map((experience, index) => (
@@ -93,7 +93,7 @@ const Experience = () => {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-gray-900 z-10"></div>
+                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-pink-300 to-indigo-300 rounded-full border-4 border-gray-900 z-10"></div>
 
                 {/* Content Card */}
                 <div className={`ml-12 md:ml-0 md:w-5/12 ${
@@ -104,7 +104,7 @@ const Experience = () => {
                     className="glass-card-hover p-6 relative"
                   >
                     {/* Position Badge */}
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-pink-300 to-indigo-300 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
                       {experience.type}
                     </div>
 

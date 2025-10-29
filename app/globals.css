@@ -15,7 +15,7 @@
   
   body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+    background: linear-gradient(135deg, #0b0f16 0%, #121421 50%, #0e101a 100%);
     color: #ffffff;
     min-height: 100vh;
   }
@@ -66,7 +66,7 @@
   }
   
   .gradient-text {
-    background-image: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6);
+    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee, #c3f0ca);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -81,7 +81,7 @@
   }
   
   .btn-primary {
-    background-image: linear-gradient(to right, #2563eb, #7c3aed);
+    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
     color: #fff;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
@@ -93,9 +93,9 @@
     border: none;
   }
   .btn-primary:hover {
-    background-image: linear-gradient(to right, #1d4ed8, #6d28d9);
+    background-image: linear-gradient(to right, #f8a6de, #90b3f0);
     transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 4px 20px rgba(248, 166, 222, 0.25);
   }
   .btn-primary:focus {
     outline: none;
@@ -179,7 +179,7 @@
     font-weight: 700; /* font-bold */
     text-align: center; /* text-center */
     margin-bottom: 1rem; /* mb-4 */
-    background: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6); /* gradient-text */
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee, #c3f0ca); /* gradient-text */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
