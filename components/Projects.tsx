@@ -15,6 +15,7 @@ type ProjectType = {
   category?: string;
   github?: string;
   demo?: string | null;
+  video?: string;
 };
 
 const Projects: React.FC = () => {
@@ -72,16 +73,17 @@ const Projects: React.FC = () => {
       demo: null,
     },
     {
-      title: 'R&B OneStopMart (Ecommerce Website and Application)',
+      title: 'R&B OneStopMart Website',
       image: '/images/RBONESTOPMART.png',
-      client: 'Ongoing Project',
+      client: 'Business Website',
       description:
-        "R&B OneStopMart is an ongoing ecommerce website and application project, similar to Shopee, TikTok Shop, and Lazada. It features inventory management, analytics to identify the company’s most salable products, and a seamless shopping experience for users.",
-      technologies: ['Tailwind CSS', 'Android Studio', 'Laravel Bootstrap', 'React', 'Kotlin'],
-      features: ['Inventory management', 'Analytics dashboard', 'Mobile + Web storefront'],
+        'A business website showcasing our store, services, and offerings. Highlights our loyalty/points card program with clear value propositions and how customers can enroll and redeem.',
+      technologies: ['Next.js', 'Tailwind CSS', 'Laravel (API)', 'React'],
+      features: ['Services and offerings pages', 'Loyalty/Points card overview', 'Contact and location info', 'Mobile-friendly UI'],
       category: 'web',
       github: '',
       demo: null,
+      video: '/videos/rb-onestopmart.mp4',
     },
   ];
 
@@ -127,7 +129,17 @@ const Projects: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <img src={selectedProject.image} alt={selectedProject.title + ' image'} className="w-full h-64 object-cover rounded" />
+                  {selectedProject.video ? (
+                    <video
+                      className="w-full h-64 object-cover rounded"
+                      src={selectedProject.video}
+                      controls
+                      playsInline
+                      preload="metadata"
+                    />
+                  ) : (
+                    <img src={selectedProject.image} alt={selectedProject.title + ' image'} className="w-full h-64 object-cover rounded" />
+                  )}
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">{selectedProject.title}</h3>
@@ -158,14 +170,14 @@ const Projects: React.FC = () => {
                     </div>
                   )}
 
-                  <div className="flex gap-3 mt-4">
+                  <div className="flex flex-wrap gap-3 mt-4 justify-center">
                     {selectedProject.github && (
-                      <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn-outline">
+                      <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn-outline w-full sm:w-auto text-center">
                         <FaGithub className="inline mr-2" /> Code
                       </a>
                     )}
                     {selectedProject.demo && (
-                      <a href={selectedProject.demo} target="_blank" rel="noreferrer" className="btn-primary">
+                      <a href={selectedProject.demo} target="_blank" rel="noreferrer" className="btn-primary w-full sm:w-auto text-center">
                         <FaExternalLinkAlt className="inline mr-2" /> Live Demo
                       </a>
                     )}

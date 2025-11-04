@@ -34,15 +34,16 @@ const About = () => {
           <div className="flex-1 w-full max-w-xl">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4"></h3>
             <p className="text-gray-300 leading-relaxed mb-4">
-              I am a passionate and dedicated BSIT student with a strong foundation in both frontend and backend development.<br/>
-              My journey in technology began with curiosity and has evolved into a deep passion for creating innovative digital solutions.<br/>
-              I believe in the power of technology to solve real-world problems and create meaningful experiences.<br/>
-              My approach combines technical expertise with creative problem-solving, ensuring that every project I work on delivers both functionality and user satisfaction.
+              I am a passionate and dedicated individual<br/>
+              with a solid foundation in both frontend and backend development.<br/>
+              My journey in technology began with curiosity and grew into a deep passion for creating meaningful, user-centered digital solutions.<br/>
+              I believe that technology has the power to solve real-world problems and improve everyday experiences.<br/>
+              My approach blends technical expertise, creativity, and problem-solving to ensure every project I build delivers both functionality and impact.
             </p>
             <div className="border border-gray-400 bg-gray-800 p-4 mt-6">
               <h4 className="text-lg font-bold text-white mb-2">My Mission</h4>
               <p className="text-gray-300 leading-relaxed">
-                To leverage my technical skills and creativity to develop innovative solutions that make a positive impact, while continuously learning and growing in the ever-evolving field of technology.
+                To continuously leverage my technical skills and creativity to craft innovative digital solutions that make a positive impact — while growing as a full-stack developer in the ever-evolving tech landscape.
               </p>
             </div>
           </div>

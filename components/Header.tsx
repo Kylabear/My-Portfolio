@@ -52,7 +52,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-pink-300 to-indigo-300 rounded-lg overflow-hidden">
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-sky-300 to-emerald-300 rounded-lg overflow-hidden">
               <img
                 src="/images/Profile.png"
                 alt="Kyla"
@@ -80,7 +80,7 @@ const Header = () => {
                 className="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-300 to-indigo-300 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-sky-300 to-emerald-300 transition-all duration-300 group-hover:w-full"></span>
               </motion.a>
             ))}
           </nav>

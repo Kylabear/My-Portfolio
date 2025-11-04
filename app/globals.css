@@ -66,7 +66,7 @@
   }
   
   .gradient-text {
-    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee, #c3f0ca);
+    background-image: linear-gradient(to right, #7dd3fc, #34d399);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -81,7 +81,7 @@
   }
   
   .btn-primary {
-    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    background-image: linear-gradient(to right, #7dd3fc, #34d399);
     color: #fff;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
@@ -93,7 +93,7 @@
     border: none;
   }
   .btn-primary:hover {
-    background-image: linear-gradient(to right, #f8a6de, #90b3f0);
+    background-image: linear-gradient(to right, #38bdf8, #10b981);
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(248, 166, 222, 0.25);
   }
@@ -179,7 +179,7 @@
     font-weight: 700; /* font-bold */
     text-align: center; /* text-center */
     margin-bottom: 1rem; /* mb-4 */
-    background: linear-gradient(to right, #fbc2eb, #a6c1ee, #c3f0ca); /* gradient-text */
+    background: linear-gradient(to right, #7dd3fc, #34d399); /* gradient-text */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

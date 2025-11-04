@@ -126,8 +126,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed font-light tracking-wide"
           >
-            Passionate BSIT student at the University of the Cordilleras, specializing in modern web technologies. 
-            I create innovative digital solutions with a focus on user experience and clean code.
+            Passionate Bachelor of Science in Information Technology (BSIT) graduate from the University of the Cordilleras, specializing in modern web technologies. 
+            I build innovative digital solutions with a strong focus on user experience, clean code, and scalable design.
           </motion.p>
 
           {/* CTA Buttons */}
