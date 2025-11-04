@@ -135,13 +135,13 @@ const Hero = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16 px-4"
           >
             <motion.a
               href="#about"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto text-center"
             >
               Get to Know Me
             </motion.a>
@@ -149,7 +149,7 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-outline"
+              className="btn-outline w-full sm:w-auto text-center"
             >
               Contact Me
             </motion.a>
@@ -158,7 +158,7 @@ const Hero = () => {
               download="CV_Kyla2025.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-5 py-3 rounded-md bg-gray-800 text-white hover:bg-gray-700 transition"
+              className="inline-flex justify-center items-center px-5 py-3 rounded-md bg-gray-800 text-white hover:bg-gray-700 transition w-full sm:w-auto text-center"
             >
               Download CV
             </motion.a>
