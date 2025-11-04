@@ -62,7 +62,7 @@ const Projects: React.FC = () => {
       demo: null,
     },
     {
-      title: 'Portfolio Website',
+      title: 'Portfolio',
       image: '/images/PORTFOLIO.png',
       client: 'Personal Portfolio',
       description: 'A modern, responsive portfolio website showcasing my skills, projects, and professional experience.',
@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
       demo: null,
     },
     {
-      title: 'R&B OneStopMart Website',
+      title: 'R&B OneStopMart',
       image: '/images/RBONESTOPMART.png',
       client: 'Business Website',
       description:

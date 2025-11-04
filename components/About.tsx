@@ -54,7 +54,7 @@ const About = () => {
               <div className="absolute -inset-0.5 rounded-[44%_56%_56%_44%/44%_48%_48%_56%] border-2 border-blue-400/20 blur-sm opacity-80 pointer-events-none"></div>
               <div className="absolute inset-0 bg-transparent rounded-[40%_60%_60%_40%/40%_50%_50%_60%]"></div>
               <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent ring-4 ring-blue-400/40 ring-offset-2 ring-offset-black/10 transition-shadow duration-300 hover:ring-blue-400/60 flex items-center justify-center">
-                <img src="/images/HomeProfile.jpg" alt="Alpha Kyla Bangachon" className="w-full h-full object-cover object-center" />
+                <img src="/images/Abtmeprofpic.jpg" alt="Alpha Kyla Bangachon" className="w-full h-full object-cover object-center" />
               </div>
             </div>
           </div>
