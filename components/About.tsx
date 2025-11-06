@@ -31,7 +31,7 @@ const About = () => {
           <h2 className="section-title">About Me</h2>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+  <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
           {/* Left side: Who I Am & Mission */}
           <div className="flex-1 w-full max-w-xl">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4"></h3>
