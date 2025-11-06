@@ -49,40 +49,10 @@ const Education = () => {
       description: 'Annual developer festival featuring the latest in technology, networking opportunities, and skill development workshops.'
     },
     {
-      title: 'DevFest Baguio 2023',
-      date: 'Nov 11, 2023',
-      venue: 'UC Theater',
-      description: 'Annual developer festival featuring the latest in technology, networking opportunities, and skill development workshops.'
-    },
-    {
-      title: 'DevFest Baguio 2024',
-      date: 'Nov 9, 2024',
-      venue: 'UC Theater',
-      description: 'Latest edition of the developer festival with cutting-edge tech insights and community building.'
-    },
-    {
-      title: 'Startup Product Branding',
-      date: 'Nov 15, 2024',
-      venue: 'UC InTTO',
-      description: 'Workshop on effective product branding strategies for startups and entrepreneurs.'
-    },
-    {
-      title: 'Startup Ignite 6',
-      date: 'Sept 28, 2024',
-      venue: 'SLU Bakakeng',
-      description: 'Startup acceleration program focusing on innovation and business model development.'
-    },
-    {
-      title: 'Campus Tech Update',
-      date: 'October 2, 2024',
-      venue: 'UC Theater',
-      description: 'Technology update session covering the latest trends and developments in the tech industry.'
-    },
-    {
-      title: 'First Reverse Pitching',
-      date: 'Sept 17, 2024',
-      venue: 'UC Canao Hall',
-      description: 'Innovative pitching event where students present solutions to real business challenges.'
+      title: 'SAP Analytics Cloud training',
+      date: 'May 31, 2025',
+      venue: 'UC M307',
+      description: 'Hands-on training session on SAP Analytics Cloud for business intelligence and data visualization.'
     },
     {
       title: 'Techno Sprint 2025',
@@ -97,10 +67,40 @@ const Education = () => {
       description: 'Workshop on startup funding strategies and product-market fit validation.'
     },
     {
-      title: 'SAP Analytics Cloud training',
-      date: 'May 31, 2025',
-      venue: 'UC M307',
-      description: 'Hands-on training session on SAP Analytics Cloud for business intelligence and data visualization.'
+      title: 'Startup Product Branding',
+      date: 'Nov 15, 2024',
+      venue: 'UC InTTO',
+      description: 'Workshop on effective product branding strategies for startups and entrepreneurs.'
+    },
+    {
+      title: 'DevFest Baguio 2024',
+      date: 'Nov 9, 2024',
+      venue: 'UC Theater',
+      description: 'Latest edition of the developer festival with cutting-edge tech insights and community building.'
+    },
+    {
+      title: 'Campus Tech Update',
+      date: 'October 2, 2024',
+      venue: 'UC Theater',
+      description: 'Technology update session covering the latest trends and developments in the tech industry.'
+    },
+    {
+      title: 'Startup Ignite 6',
+      date: 'Sept 28, 2024',
+      venue: 'SLU Bakakeng',
+      description: 'Startup acceleration program focusing on innovation and business model development.'
+    },
+    {
+      title: 'First Reverse Pitching',
+      date: 'Sept 17, 2024',
+      venue: 'UC Canao Hall',
+      description: 'Innovative pitching event where students present solutions to real business challenges.'
+    },
+    {
+      title: 'DevFest Baguio 2023',
+      date: 'Nov 11, 2023',
+      venue: 'UC Theater',
+      description: 'Annual developer festival featuring the latest in technology, networking opportunities, and skill development workshops.'
     }
   ]
 

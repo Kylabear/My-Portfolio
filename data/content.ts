@@ -180,21 +180,6 @@ export const experienceData: ExperienceEntry[] = [
       'Developed strong organizational and time management skills'
     ],
     skills: ['Data Processing', 'Administrative Support', 'Team Collaboration', 'Time Management']
-  },
-  {
-    title: 'Business Assistant',
-    company: 'Family-owned Business',
-    location: 'Alfonso Lista, Ifugao',
-    period: '2018 – present',
-    type: 'Family Business',
-    description: 'Assisted in the family-owned business, handling day-to-day operations, customer interactions, and administrative duties.',
-    responsibilities: [
-      'Supported daily business operations and administrative tasks',
-      'Managed customer service and client interactions',
-      'Helped with inventory and ordering',
-      'Developed professional communication and problem-solving skills'
-    ],
-    skills: ['Business Operations', 'Customer Service', 'Inventory Management', 'Communication']
   }
 ];
 

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp, FaHeart, FaCode, FaMapMarkerAlt, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp, FaHeart, FaCode, FaMapMarkerAlt, FaInstagram, FaWhatsapp, FaPhone } from 'react-icons/fa'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                Passionate BSIT student and Full Stack Developer specializing in modern web technologies. 
+                Passionate Bachelor of Science in Information Technology (BSIT) graduate from the University of the Cordilleras, specializing in modern web technologies. 
                 Creating innovative digital solutions with a focus on user experience and clean code.
               </p>
               
@@ -142,6 +142,10 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <FaMapMarkerAlt className="w-4 h-4 text-green-400" />
                   <span className="text-gray-400 text-sm">Baguio City, Philippines</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FaPhone className="w-4 h-4 text-blue-400" />
+                  <span className="text-gray-400 text-sm">09686654565</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FaCode className="w-4 h-4 text-purple-400" />

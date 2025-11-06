@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import { FaUser, FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaCode, FaMobile, FaPalette, FaDatabase, FaServer, FaCloud } from 'react-icons/fa'
 
 const About = () => {
+  const borderRef = React.useRef<HTMLDivElement>(null)
+  
   const personalInfo = [
     { icon: FaUser, label: 'Full Name', value: 'Alpha Kyla Bangachon' },
     { icon: FaUser, label: 'Nickname', value: 'Kyla' },
@@ -49,12 +51,47 @@ const About = () => {
           </div>
           {/* Right side: Profile Image */}
           <div className="flex-1 flex items-center justify-center">
-            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
-              {/* Organic shape frame copied from Hero.tsx */}
-              <div className="absolute -inset-0.5 rounded-[44%_56%_56%_44%/44%_48%_48%_56%] border-2 border-blue-400/20 blur-sm opacity-80 pointer-events-none"></div>
-              <div className="absolute inset-0 bg-transparent rounded-[40%_60%_60%_40%/40%_50%_50%_60%]"></div>
-              <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent ring-4 ring-blue-400/40 ring-offset-2 ring-offset-black/10 transition-shadow duration-300 hover:ring-blue-400/60 flex items-center justify-center">
-                <img src="/images/Abtmeprofpic.jpg" alt="Alpha Kyla Bangachon" className="w-full h-full object-cover object-center" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              {/* Outer border layer - slightly larger */}
+              <div 
+                ref={borderRef}
+                className="absolute inset-0"
+                style={{
+                  clipPath: 'polygon(45% 1%, 72% 9%, 90% 27%, 95% 51%, 82% 71%, 58% 87%, 38% 93%, 12% 81%, 2% 57%, 7% 37%, 22% 17%)',
+                  background: 'rgba(125, 211, 252, 0.5)',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 0 10px rgba(125, 211, 252, 0.1), inset 0 0 10px rgba(52, 211, 153, 0.05)',
+                  pointerEvents: 'none'
+                }}
+              />
+              {/* Unique asymmetric flowing frame - like a stylized leaf/blade */}
+              <div 
+                className="absolute inset-0 flex items-center justify-center"
+                style={{
+                  clipPath: 'polygon(45% 2%, 72% 10%, 90% 28%, 95% 52%, 82% 72%, 58% 88%, 38% 94%, 12% 82%, 2% 58%, 7% 38%, 22% 18%)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  if (borderRef.current) {
+                    borderRef.current.style.background = 'rgba(125, 211, 252, 0.7)';
+                    borderRef.current.style.boxShadow = '0 0 18px rgba(125, 211, 252, 0.25), inset 0 0 18px rgba(52, 211, 153, 0.12)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (borderRef.current) {
+                    borderRef.current.style.background = 'rgba(125, 211, 252, 0.5)';
+                    borderRef.current.style.boxShadow = '0 0 10px rgba(125, 211, 252, 0.1), inset 0 0 10px rgba(52, 211, 153, 0.05)';
+                  }
+                }}
+              >
+                <img 
+                  src="/images/Abtmeprofpic.jpg" 
+                  alt="Alpha Kyla Bangachon" 
+                  className="w-full h-full object-cover object-center"
+                  style={{
+                    clipPath: 'polygon(45% 2%, 72% 10%, 90% 28%, 95% 52%, 82% 72%, 58% 88%, 38% 94%, 12% 82%, 2% 58%, 7% 38%, 22% 18%)'
+                  }}
+                />
               </div>
             </div>
           </div>

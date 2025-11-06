@@ -73,11 +73,32 @@ const Hero = () => {
                 {/* Organic shape frame */}
                 <div className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 relative">
                   {/* Subtle outline ring */}
-                  <div className="absolute -inset-0.5 rounded-[44%_56%_56%_44%/44%_48%_48%_56%] border-2 border-blue-400/20 blur-sm opacity-80 pointer-events-none"></div>
+                  <div 
+                    className="absolute -inset-0.5 rounded-[44%_56%_56%_44%/44%_48%_48%_56%] pointer-events-none"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(125, 211, 252, 0.2), rgba(52, 211, 153, 0.2))',
+                      filter: 'blur(4px)',
+                      opacity: 0.4
+                    }}
+                  ></div>
                   <div className="absolute inset-0 bg-transparent rounded-[40%_60%_60%_40%/40%_50%_50%_60%]"></div>
 
-                  {/* Profile image with organic mask (no outline) */}
-                  <div className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent ring-4 ring-blue-400/40 ring-offset-2 ring-offset-black/10 transition-shadow duration-300 hover:ring-blue-400/60">
+                  {/* Profile image with organic mask */}
+                  <div 
+                    className="absolute inset-0 rounded-[40%_60%_60%_40%/40%_50%_50%_60%] overflow-hidden bg-transparent transition-all duration-300"
+                    style={{
+                      border: '1px solid rgba(125, 211, 252, 0.5)',
+                      boxShadow: '0 0 10px rgba(125, 211, 252, 0.1), inset 0 0 10px rgba(52, 211, 153, 0.05)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = 'rgba(125, 211, 252, 0.7)';
+                      e.currentTarget.style.boxShadow = '0 0 18px rgba(125, 211, 252, 0.25), inset 0 0 18px rgba(52, 211, 153, 0.12)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = 'rgba(125, 211, 252, 0.5)';
+                      e.currentTarget.style.boxShadow = '0 0 10px rgba(125, 211, 252, 0.1), inset 0 0 10px rgba(52, 211, 153, 0.05)';
+                    }}
+                  >
                     <img
                       src="/images/Profile.png"
                       alt="Alpha Kyla Bangachon - Full Stack Developer"
