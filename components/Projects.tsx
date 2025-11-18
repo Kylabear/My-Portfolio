@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
       image: '/images/CONTACEPTECH.png',
       client: 'Capstone Project',
       description:
-        'A mobile application that directly addresses the issues of limited access, cultural stigma, and privacy concerns regarding family planning and reproductive health.',
+        'A mobile application designed to address limited access, cultural stigma, and privacy concerns surrounding family planning and reproductive health. I contributed to a portion of the development, while the primary developer of the project is Jemimah Indoken',
       technologies: ['Android Studio', 'Kotlin', 'JavaScript', 'Firebase'],
       features: ['Open Forum for community discussions', 'AI-powered chatbot for instant answers', 'Telehealth consultations with professionals'],
       category: 'mobile',
@@ -65,7 +65,8 @@ const Projects: React.FC = () => {
       title: 'Portfolio',
       image: '/images/PORTFOLIO.png',
       client: 'Personal Portfolio',
-      description: 'A modern, responsive portfolio website showcasing my skills, projects, and professional experience.',
+      description:
+        'A modern, responsive portfolio website showcasing my skills, projects, and professional experience. I am actively updating the details and information on this website.',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React Icons'],
       features: ['Responsive design', 'Smooth animations', 'SEO optimized'],
       category: 'web',
@@ -77,13 +78,13 @@ const Projects: React.FC = () => {
       image: '/images/RBONESTOPMART.png',
       client: 'Business Website',
       description:
-        'A business website showcasing our store, services, and offerings. Highlights our loyalty/points card program with clear value propositions and how customers can enroll and redeem.',
+        'A business website showcasing our store, services, and offerings. Highlights our loyalty/points card program with clear value propositions and how customers can enroll and redeem. The company is still at the planning stage.',
       technologies: ['Next.js', 'Tailwind CSS', 'Laravel (API)', 'React'],
       features: ['Services and offerings pages', 'Loyalty/Points card overview', 'Contact and location info', 'Mobile-friendly UI'],
       category: 'web',
       github: '',
       demo: null,
-      video: '/videos/rb-onestopmart.mp4',
+      // video intentionally removed — this project is a placeholder while company is in planning stage
     },
   ];
 
@@ -93,7 +94,9 @@ const Projects: React.FC = () => {
     <section id="projects" className="section-padding bg-gray-900/50">
       <div className="container-custom">
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="section-title">Featured Projects</h2>
+          <div className="flex items-center justify-center gap-4">
+            <h2 className="section-title">Featured Projects</h2>
+          </div>
           <p className="section-subtitle">Click a project to view details</p>
         </motion.div>
 
@@ -137,6 +140,23 @@ const Projects: React.FC = () => {
                       playsInline
                       preload="metadata"
                     />
+                  ) : selectedProject.title && selectedProject.title.toLowerCase().includes('contraceptech') ? (
+                    // Padded container for Contraceptech so the image isn't cropped in the modal
+                    <div className="p-4 bg-gray-800 rounded">
+                      <img
+                        src={selectedProject.image}
+                        alt={selectedProject.title + ' image'}
+                        className="w-full h-64 object-contain rounded"
+                      />
+                    </div>
+                  ) : selectedProject.title && (selectedProject.title.toLowerCase().includes('r&b') || selectedProject.title.toLowerCase().includes('one stopmart') || selectedProject.title.toLowerCase().includes('rb onestopmart')) ? (
+                    // Placeholder for R&B OneStopMart while company is in planning stage
+                    <div className="p-6 bg-gray-800 rounded flex items-center justify-center h-64">
+                      <div className="text-center text-gray-300">
+                        <div className="text-4xl mb-3">📦</div>
+                        <div className="text-sm mt-1">Company is currently at the Planning Stage.</div>
+                      </div>
+                    </div>
                   ) : (
                     <img src={selectedProject.image} alt={selectedProject.title + ' image'} className="w-full h-64 object-cover rounded" />
                   )}

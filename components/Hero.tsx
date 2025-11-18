@@ -62,7 +62,7 @@ const Hero = () => {
       <div className="container-custom relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Profile + Name: side-by-side on md+ screens */}
-          <div className="mb-8 flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
+          <div className="mb-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-8">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -127,7 +127,7 @@ const Hero = () => {
               className="text-center md:text-left"
             >
               <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-light tracking-wide">Hello, I'm</h2>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black gradient-text text-glow mb-3 tracking-tight leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black gradient-text text-glow mb-3 tracking-tight leading-tight whitespace-nowrap">
                 {typedName}
                 <span className="inline-block w-1 h-[1.1em] align-[-0.1em] bg-white/80 ml-1 animate-pulse"></span>
               </h1>
@@ -135,6 +135,13 @@ const Hero = () => {
                 Call Me <span className="text-blue-400 font-semibold italic">Kyla</span>
               </h3>
               <h4 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-4 tracking-wide">Full Stack Developer</h4>
+              {/* Accepting projects badge (moved here) */}
+              <div className="flex justify-center md:justify-start">
+                <span className="inline-flex items-center gap-2 text-sm text-green-400">
+                  <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse inline-block" aria-hidden="true" />
+                  <span>Accepting projects</span>
+                </span>
+              </div>
             </motion.div>
           </div>
 
