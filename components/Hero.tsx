@@ -48,7 +48,7 @@ const Hero = () => {
   ]
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+  <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
     <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-pink-300/25 to-indigo-300/25 rounded-full blur-3xl animate-float"></div>
@@ -126,7 +126,7 @@ const Hero = () => {
               transition={{ duration: 0.9, delay: 0.1 }}
               className="text-center md:text-left"
             >
-              <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-light tracking-wide">Hello, I'm</h2>
+              <h2 className="mt-2 text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-light tracking-wide">Hello, I'm</h2>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black gradient-text text-glow mb-3 tracking-tight leading-tight whitespace-nowrap">
                 {typedName}
                 <span className="inline-block w-1 h-[1.1em] align-[-0.1em] bg-white/80 ml-1 animate-pulse"></span>
@@ -137,8 +137,8 @@ const Hero = () => {
               <h4 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-4 tracking-wide">Full Stack Developer</h4>
               {/* Accepting projects badge (moved here) */}
               <div className="flex justify-center md:justify-start">
-                <span className="inline-flex items-center gap-2 text-sm text-green-400">
-                  <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse inline-block" aria-hidden="true" />
+                <span className="inline-flex items-center gap-2 text-sm text-emerald-300">
+                  <span className="w-4 h-4 bg-emerald-400 rounded-full animate-pulse inline-block ring-2 ring-emerald-400/40" aria-hidden="true" />
                   <span>Accepting projects</span>
                 </span>
               </div>
