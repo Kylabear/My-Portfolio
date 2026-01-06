@@ -73,19 +73,6 @@ const Projects: React.FC = () => {
       github: 'https://github.com/Kylabear',
       demo: null,
     },
-    {
-      title: 'R&B OneStopMart',
-      image: '/images/RBONESTOPMART.png',
-      client: 'Business Website',
-      description:
-        'A business website showcasing our store, services, and offerings. Highlights our loyalty/points card program with clear value propositions and how customers can enroll and redeem. The company is still at the planning stage.',
-      technologies: ['Next.js', 'Tailwind CSS', 'Laravel (API)', 'React'],
-      features: ['Services and offerings pages', 'Loyalty/Points card overview', 'Contact and location info', 'Mobile-friendly UI'],
-      category: 'web',
-      github: '',
-      demo: null,
-      // video intentionally removed — this project is a placeholder while company is in planning stage
-    },
   ];
 
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
