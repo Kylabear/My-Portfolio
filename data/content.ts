@@ -151,6 +151,21 @@ export const seminarsData = [
 // Experience
 export const experienceData: ExperienceEntry[] = [
   {
+    title: 'ESL Instructor',
+    company: 'Leif Center',
+    location: 'La Trinidad, Benguet',
+    period: 'January 2026 – Present',
+    type: 'Instructor',
+    description: 'Delivered structured English language instruction to non-native speakers from diverse cultural backgrounds.',
+    responsibilities: [
+      'Delivered structured English language instruction to non-native speakers from diverse cultural backgrounds',
+      'Designed tailored lesson plans to address individual learning objectives and proficiency levels',
+      'Enhanced students’ fluency, pronunciation, and conversational competence through interactive activities',
+      'Provided constructive feedback to support continuous language development.'
+    ],
+    skills: ['English Instruction', 'Lesson Planning', 'Student Assessment', 'Communication', 'Cultural Awareness']
+  },
+  {
     title: 'Full Stack Developer',
     company: 'Department of Agriculture - Philippines',
     location: 'Baguio City, Cordillera Administrative Region, Philippines',
