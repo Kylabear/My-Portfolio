@@ -101,7 +101,7 @@ const Hero = () => {
                   >
                     <img
                       src="/images/Profile.png"
-                      alt="Alpha Kyla Bangachon - Full Stack Developer"
+                      alt="Alpha Kyla Bangachon - Software Developer"
                       className="w-full h-full object-cover object-center"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
