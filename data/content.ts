@@ -166,7 +166,7 @@ export const experienceData: ExperienceEntry[] = [
     skills: ['English Instruction', 'Lesson Planning', 'Student Assessment', 'Communication', 'Cultural Awareness']
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Software Developer',
     company: 'Department of Agriculture - Philippines',
     location: 'Baguio City, Cordillera Administrative Region, Philippines',
     period: 'Jun 2025 - August 2025',

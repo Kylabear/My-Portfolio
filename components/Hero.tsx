@@ -134,7 +134,7 @@ const Hero = () => {
               <h3 className="text-sm md:text-base italic text-gray-300 mb-2 font-medium">
                 Call Me <span className="text-blue-400 font-semibold italic">Kyla</span>
               </h3>
-              <h4 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-4 tracking-wide">Full Stack Developer</h4>
+              <h4 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-4 tracking-wide">Software Developer</h4>
               {/* Accepting projects badge (moved here) */}
               <div className="flex justify-center md:justify-start">
                 <span className="inline-flex items-center gap-2 text-sm text-emerald-300">
